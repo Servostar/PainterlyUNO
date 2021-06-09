@@ -2,6 +2,7 @@
 A small C# application for creating and editing images, which then can be uploaded to an microcontroller which manages an matrix of LEDs.
 
 > This project is currently in alpha status
+> This project was originally developed by german tongues, so forgive us, if you stumble upon something you miss to understand
 
 Features
 -
