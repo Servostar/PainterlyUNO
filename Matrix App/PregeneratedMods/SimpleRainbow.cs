@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 using static Matrix_App.GifGeneratorUtils;
 
-namespace Matrix_App
+namespace Matrix_App.PregeneratedMods
 {
     public class SimpleRainbow : MatrixGifGenerator
     {
+        [UiDescription(title: "Radial", description: "Uses the angle to alter hues")]
         public bool radial = false;
 
+        [UiDescription(title: "Saturation", description: "Overall saturation")]
         public float saturation = 1.0f;
+        [UiDescription(title: "Brightness", description: "Overall brightness")]
         public float value      = 1.0f;
+        [UiDescription(title: "Hue rotation", description: "Offset for hue calculation")]
         public float rotation   = 0.0f;
 
         protected override void ColorFragment(in int x, in int y, 

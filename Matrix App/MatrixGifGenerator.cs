@@ -1,5 +1,6 @@
 ﻿using Matrix_App.PregeneratedMods;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -85,8 +86,8 @@ namespace Matrix_App
                 };
                 button.Click += (sender, e) => OpenGeneratorUi(generator, matrix);
                 button.Image = CreateSnapshot(generator);
-                button.TextImageRelation = TextImageRelation.ImageAboveText;
-                button.Height = FilterPreviewHeight * 2;
+                button.TextImageRelation = TextImageRelation.ImageBeforeText;
+                button.Height = FilterPreviewHeight * 3 / 2;
 
                 anchor.Controls.Add(button);
             }
@@ -179,7 +180,7 @@ namespace Matrix_App
             PlaybackTimer.Interval = _form.GetDelayTime();
             PlaybackTimer.Enabled = true;
 
-            CreateDivider(controlPanel);
+            CreateDivider(controlPanel, 2);
             foreach (var field in fields)
             {
                 if (field.IsStatic || !field.IsPublic) 
@@ -187,23 +188,11 @@ namespace Matrix_App
                 
                 var fieldValue = field.GetValue(_generator);
 
-                controlPanel.Controls.Add(GetFieldUi(field, fieldValue, _generator));
-            }
-            
-            if (controlPanel.Controls.Count > 1)
-            {
-                CreateDivider(controlPanel);
- 
-                var label = new Label() { Text = "Settings" };
-                label.Font = new Font(label.Font, FontStyle.Bold);
-                controlPanel.Controls.Add(label);
+                controlPanel.Controls.AddRange(GetFieldUi(field, _generator.GetType(), fieldValue, _generator));
+                CreateDivider(controlPanel, 1);
             }
 
             controlPanel.Controls.Add(_preview);
-            CreateDivider(controlPanel);
-            var playLabel = new Label() { Text = "Playback preview" };
-            playLabel.Font = new Font(playLabel.Font, FontStyle.Bold);
-            controlPanel.Controls.Add(playLabel);
 
             FlowLayoutPanel southPane = new FlowLayoutPanel
             {
@@ -229,7 +218,7 @@ namespace Matrix_App
             return success;
         }
 
-        private static Control GetFieldUi(FieldInfo field, object? fieldValue, MatrixGifGenerator generator)
+        private static Control[] GetFieldUi(FieldInfo field, Type clazz, object? fieldValue, MatrixGifGenerator generator)
         {
             var panel = new FlowLayoutPanel
             {
@@ -237,11 +226,24 @@ namespace Matrix_App
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 AutoSize = true
             };
+            
+            var title = GetBetterFieldName(field.Name);
 
+            var description = new Label();
+            
+            if (Attribute.GetCustomAttribute(field, typeof(UiDescriptionAttribute)) is UiDescriptionAttribute desc)
+            {
+                title = desc.title;
+                description.Text = desc.description;
+                description.ForeColor = Color.Gray;
+                description.Height += 10;
+                description.AutoSize = true;
+            }  
+            
             panel.Controls.Add(new Label
             {
-                TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                Text = GetBetterFieldName(field.Name),
+                TextAlign = ContentAlignment.MiddleLeft,
+                Text = title,
                 Dock = DockStyle.Left,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 Width = 100
@@ -305,7 +307,7 @@ namespace Matrix_App
                 }
             }
 
-            return panel;
+            return new Control[] {description, panel};
         }
 
         /// <summary>
@@ -354,13 +356,13 @@ namespace Matrix_App
         /// Adds a separating line to the controls
         /// </summary>
         /// <param name="controlPanel"></param>
-        private static void CreateDivider(Control controlPanel)
+        private static void CreateDivider(Control controlPanel, int height)
         {
             var divider = new Label
             {
                 BorderStyle = BorderStyle.Fixed3D, 
                 AutoSize = false, 
-                Height = 2, 
+                Height = height, 
                 Width = 500
             };
 

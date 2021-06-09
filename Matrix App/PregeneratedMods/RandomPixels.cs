@@ -4,6 +4,7 @@ namespace Matrix_App.PregeneratedMods
 {
     public class RandomPixels : MatrixGifGenerator
     {
+        [UiDescriptionAttribute(title: "Seed", description: "Just a seed for a bad deterministic random function")]
         public int seed = 0;
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)

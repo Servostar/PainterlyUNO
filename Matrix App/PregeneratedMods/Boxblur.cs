@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using static Matrix_App.GifGeneratorUtils;
 
 namespace Matrix_App.PregeneratedMods
 {
-    public class Boxblur : MatrixGifGenerator
+    public sealed class Boxblur : MatrixGifGenerator
     {
+        [UiDescriptionAttribute(title: "Blur size", description: "The side length of the bounding square used to blur in pixels")]
         public int blurSize = 2;
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
