@@ -1,49 +1,48 @@
 ﻿
-namespace MatrixDesigner
+namespace Matrix_App
 {
-    public sealed class Defaults
+    public static class Defaults
     {
-        public static readonly int PORT_NAME_UPDATE_INTERVAL = 5000;
+        public const int PortNameUpdateInterval = 5000;
 
-        public static readonly int MATRIX_START_WIDTH = 10;
-        public static readonly int MATRIX_START_HEIGHT = 10;
-        public static readonly int MATRIX_START_FRAMES = 1;
+        public const int MatrixStartWidth = 10;
+        public const int MatrixStartHeight = 10;
+        public const int MatrixStartFrames = 1;
 
-        public static readonly int MATRIX_LIMITED_WIDTH = 512;
-        public static readonly int MATRIX_LIMITED_HEIGHT = 512;
+        public const int MatrixLimitedWidth = 512;
+        public const int MatrixLimitedHeight = 512;
 
-        public static readonly int BAUD_RATE = 9600;
+        public const int BaudRate = 9600;
 
-        public static readonly int READ_TIMEOUT_MS = 5500;
-        public static readonly int WRITE_TIMEOUT_MS = 5500;
+        public const int ReadTimeoutMs = 5500;
+        public const int WriteTimeoutMs = 5500;
 
         /// <summary>
         /// Total count of LEDs at start
         /// </summary>
-        public static readonly int MATRIX_START_LED_COUNT = MATRIX_START_WIDTH * MATRIX_START_HEIGHT * BPP;
+        public static readonly int MATRIX_START_LED_COUNT = MatrixStartWidth * MatrixStartHeight * Bpp;
 
         /// <summary>
         ///  Number of Bytes Per Pixel: 3 cause Red (1 byte) + Blue (1 Byte) + Green (1 byte) = 3
         /// </summary>
-        public static readonly int BPP = 3;
+        public const int Bpp = 3;
 
-        public static readonly int FILTER_PREVIEW_WIDTH  = 32;
-        public static readonly int FILTER_PREVIEW_HEIGHT = 32;
+        public const int FilterPreviewWidth = 32;
+        public const int FilterPreviewHeight = 32;
 
-        public static readonly int ARDUINO_SUCCESS_BYTE = 21;
+        public const int ArduinoSuccessByte = 21;
 
-        public static readonly int ARDUINO_COMMAND_QUEUE_SIZE  = 5;
-        public static readonly int ARDUINO_RECIVCE_BUFFER_SIZE = 1 + 1 + 1 + MATRIX_LIMITED_WIDTH * MATRIX_LIMITED_HEIGHT;
+        public const int ArduinoCommandQueueSize = 5;
+        public const int ArduinoReceiveBufferSize = 1 + 1 + 1 + MatrixLimitedWidth * MatrixLimitedHeight;
 
-        public static readonly int DEQUEUE_WAIT_TIMEOUT_COUNTER = 2;
+        public const int DequeueWaitTimeoutCounter = 2;
     }
 
-    public sealed class ArduinoInstruction
+    public static class ArduinoInstruction
     {
-        public static readonly byte OPCODE_SCALE  = 0;
-//        public static readonly byte OPCODE_SINGLE = 1;
-        public static readonly byte OPCODE_IMAGE  = 2;
-        public static readonly byte OPCODE_FILL   = 3;
+        public const byte OpcodeScale = 0;
+        public const byte OpcodeImage = 2;
+        public const byte OpcodeFill = 3;
         public static readonly byte OPCODE_CONFIG = 4;
     }
 }

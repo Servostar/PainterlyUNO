@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static MatrixDesigner.Defaults;
+using static Matrix_App.Defaults;
 
 namespace Matrix_App
 {
@@ -94,7 +94,7 @@ namespace Matrix_App
 
         public static void SampleFrame(in byte[][] sampler, int frame, int x, int y, int width, out float r, out float g, out float b)
         {
-            var index = (x + y * width) * BPP;
+            var index = (x + y * width) * Bpp;
             
             // normalize pixel value to [0, 1]
             r = sampler[frame][index + 0] * 0.00392156862745f;

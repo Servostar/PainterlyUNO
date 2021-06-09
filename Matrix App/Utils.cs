@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Text;
-using static MatrixDesigner.Defaults;
+using static Matrix_App.Defaults;
 
 namespace Matrix_App
 {
@@ -78,7 +78,7 @@ namespace Matrix_App
             {
                 for (int y = 0; y < height; y++)
                 {
-                    int index = (x + y * width) * BPP;
+                    int index = (x + y * width) * Bpp;
 
                     image.SetPixel(x, y, Color.FromArgb(
                             (byte) buffer[index + 0],
@@ -104,7 +104,7 @@ namespace Matrix_App
 
             for (int frame = 0; frame < frames; frame++)
             {
-                bytes[frame] = new byte[width * height * BPP];
+                bytes[frame] = new byte[width * height * Bpp];
             }
 
             return bytes;

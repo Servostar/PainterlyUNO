@@ -486,7 +486,7 @@ namespace Matrix_App
             this.ZeichnenTextBoxRed.TabIndex = 4;
             this.ZeichnenTextBoxRed.Text = "0";
             this.ZeichnenTextBoxRed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ZeichnenTextBoxRed.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ZeichnenTextBoxRed_KeyUp);
+            this.ZeichnenTextBoxRed.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DrawTextBoxRed_KeyUp);
             // 
             // ZeichnenTrackBarRed
             // 
@@ -529,7 +529,7 @@ namespace Matrix_App
             this.ZeichnenTextBoxBlue.TabIndex = 6;
             this.ZeichnenTextBoxBlue.Text = "0";
             this.ZeichnenTextBoxBlue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ZeichnenTextBoxBlue.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ZeichnenTextBoxBlue_KeyUp);
+            this.ZeichnenTextBoxBlue.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DrawTextBoxBlue_KeyUp);
             // 
             // ZeichnenTextBoxGreen
             // 
@@ -539,7 +539,7 @@ namespace Matrix_App
             this.ZeichnenTextBoxGreen.TabIndex = 5;
             this.ZeichnenTextBoxGreen.Text = "0";
             this.ZeichnenTextBoxGreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ZeichnenTextBoxGreen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ZeichnenTextBoxGreen_KeyUp);
+            this.ZeichnenTextBoxGreen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DrawTextBoxGreen_KeyUp);
             // 
             // Clear
             // 
@@ -552,7 +552,7 @@ namespace Matrix_App
             this.Clear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.ZeichnenClear_Click);
+            this.Clear.Click += new System.EventHandler(this.DrawClear_Click);
             // 
             // fill
             // 
@@ -565,7 +565,7 @@ namespace Matrix_App
             this.fill.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.fill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.fill.UseVisualStyleBackColor = true;
-            this.fill.Click += new System.EventHandler(this.ZeichnenFill_Click);
+            this.fill.Click += new System.EventHandler(this.DrawFill_Click);
             // 
             // ZeichnenFarbRad
             // 

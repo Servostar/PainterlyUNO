@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using static Matrix_App.Utils;
-using static MatrixDesigner.Defaults;
+using static Matrix_App.Defaults;
 using Timer = System.Windows.Forms.Timer;
 
 namespace Matrix_App
@@ -47,8 +47,8 @@ namespace Matrix_App
         {
             PlaybackTimer.Tick += PlaybackFrame;
 
-            Snapshot     = CreateImageRGB_NT(FILTER_PREVIEW_WIDTH, FILTER_PREVIEW_HEIGHT, 1);
-            _initialBuffer = CreateImageRGB_NT(FILTER_PREVIEW_WIDTH, FILTER_PREVIEW_HEIGHT, 1);
+            Snapshot     = CreateImageRGB_NT(FilterPreviewWidth, FilterPreviewHeight, 1);
+            _initialBuffer = CreateImageRGB_NT(FilterPreviewWidth, FilterPreviewHeight, 1);
 
             Renderer = new ThreadQueue("Matrix Gif Renderer", 2);
         }
@@ -86,7 +86,7 @@ namespace Matrix_App
                 button.Click += (sender, e) => OpenGeneratorUi(generator, matrix);
                 button.Image = CreateSnapshot(generator);
                 button.TextImageRelation = TextImageRelation.ImageAboveText;
-                button.Height = FILTER_PREVIEW_HEIGHT * 2;
+                button.Height = FilterPreviewHeight * 2;
 
                 anchor.Controls.Add(button);
             }
@@ -96,7 +96,7 @@ namespace Matrix_App
         {
             _generator = new RandomPixels();
             // put some random pixels in as default initial image to operate on for filter
-            SetGlobalArgs(FILTER_PREVIEW_WIDTH, FILTER_PREVIEW_HEIGHT, 1, null, _initialBuffer);
+            SetGlobalArgs(FilterPreviewWidth, FilterPreviewHeight, 1, null, _initialBuffer);
             InvokeGenerator();
 
             BlockBuffer();
@@ -104,7 +104,7 @@ namespace Matrix_App
             _generator = matrixGifGenerator;
 
             // render filter
-            SetGlobalArgs(FILTER_PREVIEW_WIDTH, FILTER_PREVIEW_HEIGHT, 1, _initialBuffer, Snapshot);
+            SetGlobalArgs(FilterPreviewWidth, FilterPreviewHeight, 1, _initialBuffer, Snapshot);
             InvokeGenerator();
 
             BlockBuffer();
@@ -131,7 +131,7 @@ namespace Matrix_App
             if (!ShowEditDialog(matrix))
                 return;
             
-            FlipColorStoreRG_GR(_animationBuffer, _form.Gif);
+            FlipColorStoreRG_GR(_animationBuffer, _form.gifBuffer);
             _form.ResetTimeline();
         }
 
@@ -331,15 +331,15 @@ namespace Matrix_App
         private static void Initialize(in Matrix matrix)
         {
             // Create new initial buffer and copy what ever was in the Gif buffer to it
-            _initialBuffer = CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.Gif.Length);
-            FlipColorStoreRG_GR(_form.Gif, _initialBuffer);
+            _initialBuffer = CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.gifBuffer.Length);
+            FlipColorStoreRG_GR(_form.gifBuffer, _initialBuffer);
 
             // Set Generator args
             SetGlobalArgs(matrix.matrixWidth(),
                           matrix.matrixHeight(),
-                          _form.Gif.Length - 1,
+                          _form.gifBuffer.Length - 1,
                           _initialBuffer,
-                          CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.Gif.Length)
+                          CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.gifBuffer.Length)
                     );
             
             // Create preview matrix

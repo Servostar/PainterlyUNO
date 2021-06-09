@@ -8,7 +8,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading;
 
-using static MatrixDesigner.Defaults;
+using static Matrix_App.Defaults;
 
 namespace Matrix_App
 {
@@ -28,7 +28,7 @@ namespace Matrix_App
 
         private volatile bool isPortValid = false;
 
-        private byte[] recived = new byte[ARDUINO_RECIVCE_BUFFER_SIZE];
+        private byte[] recived = new byte[ArduinoReceiveBufferSize];
         private int mark;
         
         public PortCommandQueue(ref SerialPort port)
@@ -62,7 +62,7 @@ namespace Matrix_App
 
                                 int b;
                                 mark = 0;
-                                while((b = port.ReadByte()) != ARDUINO_SUCCESS_BYTE)
+                                while((b = port.ReadByte()) != ArduinoSuccessByte)
                                 {
                                     recived[mark++] = (byte) b;
                                 }
@@ -113,7 +113,7 @@ namespace Matrix_App
                 portDeliverThread.Start();
             }
 
-            if (byteWriteQueue.Count < ARDUINO_COMMAND_QUEUE_SIZE)
+            if (byteWriteQueue.Count < ArduinoCommandQueueSize)
             {
                 lock (byteWriteQueue)
                 {
@@ -153,7 +153,7 @@ namespace Matrix_App
                 timeCount++;
                 Thread.Sleep(500);
 
-                wait = timeCount == DEQUEUE_WAIT_TIMEOUT_COUNTER;
+                wait = timeCount == DequeueWaitTimeoutCounter;
             }
         }
 

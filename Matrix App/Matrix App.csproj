@@ -27,6 +27,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Remove="SplashScreen.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,5 +35,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Remove="SplashScreen.resx" />
+    <None Remove="Resources\pfüsikuh.png" />
+    <EmbeddedResource Include="Resources\pfüsikuh.png" />
   </ItemGroup>
 </Project>
