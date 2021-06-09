@@ -7,12 +7,18 @@ namespace Matrix_App.PregeneratedMods
 {
     public sealed class ColorAdjust : MatrixGifGenerator
     {
+        [UiDescriptionAttribute(title: "Tone offset", description: "Sets an additional offset to the pixels hue")]
         public float hueOffset       = 0.0f;
+        [UiDescriptionAttribute(title: "Saturation boost", description: "Decreases or increases saturation")]
         public float saturationBoost = 0.5f;
+        [UiDescriptionAttribute(title: "Brightness boost", description: "Decreases or increases brightness")]
         public float valueBoost      = 0.5f;
 
+        [UiDescriptionAttribute(title: "Red boost", description: "Decreases or increases Red")]
         public float redBoost   = 0.5f;
+        [UiDescriptionAttribute(title: "Green boost", description: "Decreases or increases Green")]
         public float greenBoost = 0.5f;
+        [UiDescriptionAttribute(title: "Blue boost", description: "Decreases or increases Blue")]
         public float blueBoost  = 0.5f;
 
         private float boost(float x, float y)

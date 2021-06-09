@@ -7,6 +7,7 @@ namespace Matrix_App.PregeneratedMods
 {
     public sealed class Grayscale : MatrixGifGenerator
     {
+        [UiDescriptionAttribute(title: "use Luminance", description: "Use luminance as defined by ITU-R BT.709 as grayscale output")]
         public bool byLuminance = false;
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)

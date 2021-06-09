@@ -63,7 +63,7 @@ namespace Matrix_App
             // apply light-mode by default
             new LightMode().ApplyTheme(this);
         }
-        
+
         private void Init()
         {
             // Create port name update timer
@@ -99,7 +99,7 @@ namespace Matrix_App
             if (((int) DateTime.Now.DayOfWeek) != 3) 
                 return;
             
-            if (new Random().Next(0, 9) <= 1)
+            if (new Random().Next(0, 9) >= 1)
                 return;
             
             using (Bitmap wednesdayFrog = new Bitmap(Properties.Resources.Frosch))
@@ -646,7 +646,7 @@ namespace Matrix_App
         {
             if (Timeline.InvokeRequired)
             {
-                // invoke on the comboboxes thread
+                // invoke on the combo-boxes thread
                 Timeline.Invoke(new Action(() =>
                 {
                     if (Timeline.Value < Timeline.Maximum)

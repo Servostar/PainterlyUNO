@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Matrix_App
@@ -17,8 +18,12 @@ namespace Matrix_App
             
             Controls.Add(new Label()
             {
-                Image = Properties.Resources.Pfüsikuh
+                Image = Properties.Resources.Pfüsikuh,
+                Size = new Size(Properties.Resources.Pfüsikuh.Width, Properties.Resources.Pfüsikuh.Height)
             });
+
+            Size = new Size(Properties.Resources.Pfüsikuh.Width, Properties.Resources.Pfüsikuh.Height);
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         public static void ShowSplashScreen()
