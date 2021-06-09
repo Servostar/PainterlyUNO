@@ -1,0 +1,406 @@
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\Matrix PC App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Matrix_App\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix App\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\SvenV\Downloads\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19(20-21)\IT in Gut\LED Matrix Projekt\Matrix_App_V2\Matrix App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Fertige_Matrix_App_V1\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Form1.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.4.H2\Matrix_App_V3.4_RC1\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.4_RC2\Matrix_App_V3.4_RC2\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Neopixel.ColorWheel.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\felix\schule\gyte19_20-21\IT_in_Gut\LED_Matrix_Projekt\Matrix_App_V3.5.2_RC4\Matrix_App_V3.5.2_RC3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.ColorWheel.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+C:\Users\SvenV\Downloads\Matrix_App_V3.5.3_RC5\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.ColorWheel.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache

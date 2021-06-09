@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {}
+  },
+  "projects": {
+    "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+        "projectName": "Matrix App",
+        "projectPath": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+        "packagesPath": "C:\\Users\\SvenV\\.nuget\\packages\\",
+        "outputPath": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SvenV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.Management": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.15, 3.1.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

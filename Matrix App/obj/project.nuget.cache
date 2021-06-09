@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "HcpCh1x9e2lK57k4ZcGxRqhcvdktsa3XHCQwpTZEhu+1q98e+8L1yrgNWAiPdfeEo3RdwNyZMF98of3ldn2r1w==",
+  "success": true,
+  "projectFilePath": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SvenV\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\system.io.ports\\4.4.0\\system.io.ports.4.4.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\system.management\\5.0.0\\system.management.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\SvenV\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.15\\microsoft.netcore.app.host.win-x64.3.1.15.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Matrix App depends on System.IO.Ports (>= 3.1.0) but System.IO.Ports 3.1.0 was not found. An approximate best match of System.IO.Ports 4.4.0 was resolved.",
+      "libraryId": "System.IO.Ports",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Matrix App": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "nativeDebugging": true
+    }
+  }
+}
