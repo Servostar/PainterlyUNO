@@ -6,38 +6,38 @@ namespace Matrix_App.PregeneratedMods
 {
     public sealed class Rain : MatrixGifGenerator
     {
-        private float Fract(float x)
+        private static float Fract(float x)
         {
             return x - MathF.Floor(x);
         }
 
-        private float Step(float x, float y)
+        private static float Step(float x, float y)
         {
             return y > x ? 1.0f : 0.0f;
         }
 
-        private float Shower(float u, float v, float x, float y, float t, float frame)
+        private static float Shower(float u, float v, float x, float y, float t, float frame)
         {
-            float movY = Fract(v - frame * t + y + MathF.Sin(u * 5.0f) * 0.3f);
+            var movY = Fract(v - frame * t + y + MathF.Sin(u * 5.0f) * 0.3f);
 
-            float opacityX = Step(0.7f, Fract((u + x) * 93.0f));
-            float opacityY = Step(0.6f, movY);
+            var opacityX = Step(0.7f, Fract((u + x) * 93.0f));
+            var opacityY = Step(0.6f, movY);
 
-            float drop = MathF.Pow(movY, 6.0f);
+            var drop = MathF.Pow(movY, 6.0f);
 
             return opacityX * opacityY * drop;
         }
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
-            float time = frame / (totalFrames * 0.5f);
+            var time = frame / (totalFrames * 0.5f);
 
-            float s1 = Shower(u, v, 0.00f, 0.0f, 1.0f, time);
-            float s2 = Shower(u, v, 3.11f, 0.5f, 1.0f, time);
-            float s3 = Shower(u, v, 3.40f, 0.2f, 0.6f, time);
-            float s4 = Shower(u, v, 3.20f, 0.7f, 0.6f, time);
+            var s1 = Shower(u, v, 0.00f, 0.0f, 1.0f, time);
+            var s2 = Shower(u, v, 3.11f, 0.5f, 1.0f, time);
+            var s3 = Shower(u, v, 3.40f, 0.2f, 0.6f, time);
+            var s4 = Shower(u, v, 3.20f, 0.7f, 0.6f, time);
 
-            float skyLight = (Fract(MathF.Sin(u * v + v) * 67128.0f + time) * 0.3f + 0.7f) * (1.3f - v);
+            var skyLight = (Fract(MathF.Sin(u * v + v) * 67128.0f + time) * 0.3f + 0.7f) * (1.3f - v);
 
             r = skyLight * 0.1f;
             g = skyLight * 0.2f;

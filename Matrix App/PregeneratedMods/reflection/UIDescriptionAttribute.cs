@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Matrix_App.PregeneratedMods
+namespace Matrix_App.PregeneratedMods.reflection
 {
     [AttributeUsage(AttributeTargets.Field)] 
     public class UiDescriptionAttribute : Attribute

@@ -1,47 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Matrix_App.PregeneratedMods.reflection;
 using static Matrix_App.GifGeneratorUtils;
 
 namespace Matrix_App.PregeneratedMods
 {
-    public sealed class ColorAdjust : MatrixGifGenerator
+    public class ColorAdjust : MatrixGifGenerator
     {
-        [UiDescriptionAttribute(title: "Tone offset", description: "Sets an additional offset to the pixels hue")]
-        public float hueOffset       = 0.0f;
-        [UiDescriptionAttribute(title: "Saturation boost", description: "Decreases or increases saturation")]
-        public float saturationBoost = 0.5f;
-        [UiDescriptionAttribute(title: "Brightness boost", description: "Decreases or increases brightness")]
-        public float valueBoost      = 0.5f;
+        [UiWidget]
+        [UiDescription(title: "Tone offset", description: "Sets an additional offset to the pixels hue")]
+        private float hueOffset = 0.0f;
+        
+        [UiWidget]
+        [UiDescription(title: "Saturation boost", description: "Decreases or increases saturation")]
+        private float saturationBoost = 0.5f;
+        
+        [UiWidget]
+        [UiDescription(title: "Brightness boost", description: "Decreases or increases brightness")]
+        private float valueBoost = 0.5f;
 
-        [UiDescriptionAttribute(title: "Red boost", description: "Decreases or increases Red")]
-        public float redBoost   = 0.5f;
-        [UiDescriptionAttribute(title: "Green boost", description: "Decreases or increases Green")]
-        public float greenBoost = 0.5f;
-        [UiDescriptionAttribute(title: "Blue boost", description: "Decreases or increases Blue")]
-        public float blueBoost  = 0.5f;
+        [UiWidget]
+        [UiDescription(title: "Red boost", description: "Decreases or increases Red")]
+        private float redBoost = 0.5f;
+        
+        [UiWidget]
+        [UiDescription(title: "Green boost", description: "Decreases or increases Green")]
+        private float greenBoost = 0.5f;
+        
+        [UiWidget]
+        [UiDescription(title: "Blue boost", description: "Decreases or increases Blue")]
+        private float blueBoost = 0.5f;
 
-        private float boost(float x, float y)
+        private static float Boost(float x, float y)
         {
             return Math.Clamp(x + (y - 0.5f) * 2.0f, 0.0f, 1.0f);
         }
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
-            SampleFrame(actualStore, frame, x, y, width, out float tr, out float tg, out float tb);
+            SampleFrame(actualStore!, frame, x, y, width, out float tr, out float tg, out float tb);
 
+            // Adjust HSV
             HsvFromRgb(tr, tg, tb, out float h, out float s, out float value);
 
             h = h / 360.0f + hueOffset;
             h = (h - MathF.Floor(h)) * 360.0f;
-            s = boost(s, saturationBoost);
-            value = boost(value, valueBoost);
+            s = Boost(s, saturationBoost);
+            value = Boost(value, valueBoost);
 
+            // Adjust RGB
             RgbFromHsv(h, s, value, out tr, out tg, out tb);
 
-            r = boost(tr, redBoost);
-            g = boost(tg, greenBoost);
-            b = boost(tb, blueBoost);
+            r = Boost(tr, redBoost);
+            g = Boost(tg, greenBoost);
+            b = Boost(tb, blueBoost);
         }
     }
 }

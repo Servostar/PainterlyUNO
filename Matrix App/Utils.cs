@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Text;
 using static Matrix_App.Defaults;
 
 namespace Matrix_App
@@ -81,9 +77,9 @@ namespace Matrix_App
                     int index = (x + y * width) * Bpp;
 
                     image.SetPixel(x, y, Color.FromArgb(
-                            (byte) buffer[index + 0],
-                            (byte) buffer[index + 1],
-                            (byte) buffer[index + 2]
+                             buffer[index + 0],
+                             buffer[index + 1],
+                            buffer[index + 2]
                         ));
                 }
             }

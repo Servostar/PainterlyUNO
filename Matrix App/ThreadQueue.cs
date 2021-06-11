@@ -25,7 +25,7 @@ namespace Matrix_App
             {
                 Name = name, 
                 IsBackground = true, 
-                Priority = ThreadPriority.BelowNormal
+                Priority = ThreadPriority.Normal
             };
             thread.Start();
         }
@@ -56,7 +56,7 @@ namespace Matrix_App
                 {
                     try
                     {
-                        Thread.Sleep(500);
+                        Thread.Sleep(10);
                     } catch(ThreadInterruptedException)
                     {
                         thread.Interrupt();

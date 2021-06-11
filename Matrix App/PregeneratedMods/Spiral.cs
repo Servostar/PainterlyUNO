@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Matrix_App.PregeneratedMods
 {
@@ -14,18 +12,18 @@ namespace Matrix_App.PregeneratedMods
 	        return clamp(v,0.,1.);
         }
          */
-        private float SpiralCurve(float s, float t, float time)
+        private static float SpiralCurve(float s, float t, float time)
         {
-            float r = MathF.Sqrt(s * s + t * t);
-            float a = MathF.Atan2(t, s);
-            float v = MathF.Sin(50 * (MathF.Sqrt(r) - 0.02f * a - time));
+            var r = MathF.Sqrt(s * s + t * t);
+            var a = MathF.Atan2(t, s);
+            var v = MathF.Sin(50 * (MathF.Sqrt(r) - 0.02f * a - time));
 
             return v;
         }
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
-            float sp = SpiralCurve((u - 0.5f) * 0.1f, (v - 0.5f) * 0.1f, frame / (float) totalFrames);
+            var sp = SpiralCurve((u - 0.5f) * 0.1f, (v - 0.5f) * 0.1f, frame / (float) totalFrames);
 
             r = sp;
             g = sp;

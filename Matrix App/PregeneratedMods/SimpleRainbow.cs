@@ -1,24 +1,28 @@
 ﻿using System;
+using Matrix_App.PregeneratedMods.reflection;
 using static Matrix_App.GifGeneratorUtils;
 
 namespace Matrix_App.PregeneratedMods
 {
-    public class SimpleRainbow : MatrixGifGenerator
+    public sealed class SimpleRainbow : MatrixGifGenerator
     {
+        [UiWidget]
         [UiDescription(title: "Radial", description: "Uses the angle to alter hues")]
-        public bool radial = false;
+        private bool radial = false;
 
+        [UiWidget]
         [UiDescription(title: "Saturation", description: "Overall saturation")]
-        public float saturation = 1.0f;
+        private float saturation = 1.0f;
+        
+        [UiWidget]
         [UiDescription(title: "Brightness", description: "Overall brightness")]
-        public float value      = 1.0f;
+        private float value = 1.0f;
+        
+        [UiWidget]
         [UiDescription(title: "Hue rotation", description: "Offset for hue calculation")]
-        public float rotation   = 0.0f;
+        private float rotation = 0.0f;
 
-        protected override void ColorFragment(in int x, in int y, 
-                                           in float u, in float v, 
-                                           in int frame, 
-                                           out float r, out float g, out float b)
+        protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
             if (radial)
             {

@@ -1,11 +1,10 @@
 ﻿using Matrix_App.PregeneratedMods;
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
+using Matrix_App.PregeneratedMods.reflection;
 using static Matrix_App.Utils;
 using static Matrix_App.Defaults;
 using Timer = System.Windows.Forms.Timer;
@@ -26,33 +25,46 @@ namespace Matrix_App
             new Grayscale(),
             new Invert()
         };
-
-        private static readonly Timer PlaybackTimer = new Timer();
-
-        private static int _playbackFrame;
-
-        protected static int totalFrames;
-        protected static byte[][]? actualStore;
+        
+        // Static generator accessible members
+        // must work on multiple threads
+        protected static int totalFrames;   // total amount of frames to generate
+        protected static byte[][]? actualStore; // image copy of previous GIF for generator
 
         protected static int width;
         protected static int height;
+        
+        // updates the preview matrix for animation
+        private static readonly Timer PlaybackTimer = new Timer();
+        // current frame to play
+        private static int _playbackFrame;
 
+        // temporary buffer for storing snapshots for buttons 
         private static readonly byte[][] Snapshot;
-        private static byte[][] _initialBuffer;
+        private static byte[][] _initialBuffer; // temporary buffer for swapping
 
+        // Generator renderer
         private static readonly ThreadQueue Renderer;
 
+        // Current generator to use
         private static MatrixGifGenerator? _generator;
 
         static MatrixGifGenerator()
         {
             PlaybackTimer.Tick += PlaybackFrame;
-
+            
+            // Generate buffer for button filter snapshots
             Snapshot     = CreateImageRGB_NT(FilterPreviewWidth, FilterPreviewHeight, 1);
             _initialBuffer = CreateImageRGB_NT(FilterPreviewWidth, FilterPreviewHeight, 1);
 
             Renderer = new ThreadQueue("Matrix Gif Renderer", 2);
         }
+        
+        /// <summary>
+        /// Plays the next frame of what is currently in the animation buffer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private static void PlaybackFrame(object? sender, EventArgs e)
         {
             if (_playbackFrame >= _animationBuffer.Length - 1)
@@ -65,12 +77,25 @@ namespace Matrix_App
             _playbackFrame++;
         }
 
+        /// <summary>
+        /// Colors a single fragment at the specified pixel location (x|y) at frame frame.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="u">Normalized pixel X-coordinate</param>
+        /// <param name="v">Normalized pixel Y-coordinate</param>
+        /// <param name="frame">Current frame</param>
+        /// <param name="r">Pixel Red value in range [0, 1] (saturated)</param>
+        /// <param name="g">Pixel Green value in range [0, 1] (saturated)</param>
+        /// <param name="b">Pixel Blue value in range [0, 1] (saturated)</param>
         protected abstract void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b);
 
+        // Buffer to store generator result in
         private static byte[][] _animationBuffer = null!;
 
+        // Main application reference
         private static MatrixDesignerMain _form = null!;
-        private static Matrix _preview = null!;
+        private static Matrix _preview = null!; // preview matrix
 
         public static void GenerateBaseUi(FlowLayoutPanel anchor, Matrix matrix, MatrixDesignerMain form1)
         {
@@ -79,10 +104,11 @@ namespace Matrix_App
             // generate access buttons for available generators
             foreach (var generator in Generators)
             {
+                // generate button
                 var button = new Button
                 {
                     Width = 215, 
-                    Text = GetBetterFieldName(generator.GetType().Name)
+                    Text = FieldWidgets.GetBetterFieldName(generator.GetType().Name)
                 };
                 button.Click += (sender, e) => OpenGeneratorUi(generator, matrix);
                 button.Image = CreateSnapshot(generator);
@@ -124,16 +150,34 @@ namespace Matrix_App
                 Thread.Sleep(50);
             }
         }
-
+        
         private static void OpenGeneratorUi(MatrixGifGenerator matrixGifGenerator, Matrix matrix)
         {
             _generator = matrixGifGenerator;
             
             if (!ShowEditDialog(matrix))
                 return;
-            
-            FlipColorStoreRG_GR(_animationBuffer, _form.gifBuffer);
-            _form.ResetTimeline();
+
+            if (Renderer.HasWork())
+            {
+                if (DialogResult.Yes ==
+                    MessageBox.Show($@"The filter {_generator.GetType().Name} hasn't finished yet, wait for completion?",
+                        @"Filter incomplete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    BlockBuffer();
+                    FlipColorStoreRG_GR(_animationBuffer, MatrixDesignerMain.gifBuffer);
+                    _form.ResetTimeline();
+                }
+                else
+                {
+                    MessageBox.Show($@"The filter {_generator.GetType().Name} has timedout", @"Failed applying filter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                FlipColorStoreRG_GR(_animationBuffer, MatrixDesignerMain.gifBuffer);
+                _form.ResetTimeline();
+            }
         }
 
         private static void SetGlobalArgs(int w, int h, int f, in byte[][]? previous, in byte[][] preview)
@@ -149,6 +193,11 @@ namespace Matrix_App
 
         private static bool ShowEditDialog(Matrix matrix)
         {
+            if (_generator == null)
+            {
+                return false;
+            }
+            
             var success = false;
 
             Initialize(matrix);
@@ -160,7 +209,7 @@ namespace Matrix_App
                 Text = @"Vorgenerierter Modus: " + _generator.GetType().Name
             };
 
-            var confirmation = new Button {Text = "Apply", Anchor = AnchorStyles.Top | AnchorStyles.Left};
+            var confirmation = new Button {Text = @"Apply", Anchor = AnchorStyles.Top | AnchorStyles.Left};
             confirmation.Click += (sender, e) => {
                 success = true;
                 prompt.Close();
@@ -175,20 +224,21 @@ namespace Matrix_App
                 AutoSize = true
             };
 
-            var fields = _generator.GetType().GetFields();
-
             PlaybackTimer.Interval = _form.GetDelayTime();
             PlaybackTimer.Enabled = true;
+
+            var type = _generator.GetType();
+            var fields = type.GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
 
             CreateDivider(controlPanel, 2);
             foreach (var field in fields)
             {
-                if (field.IsStatic || !field.IsPublic) 
+                var widget = FieldWidgets.GetFieldWidget(field, _generator, InvokeGenerator);
+
+                if (widget == null) 
                     continue;
                 
-                var fieldValue = field.GetValue(_generator);
-
-                controlPanel.Controls.AddRange(GetFieldUi(field, _generator.GetType(), fieldValue, _generator));
+                controlPanel.Controls.AddRange(widget);
                 CreateDivider(controlPanel, 1);
             }
 
@@ -218,130 +268,17 @@ namespace Matrix_App
             return success;
         }
 
-        private static Control[] GetFieldUi(FieldInfo field, Type clazz, object? fieldValue, MatrixGifGenerator generator)
-        {
-            var panel = new FlowLayoutPanel
-            {
-                FlowDirection = FlowDirection.LeftToRight,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                AutoSize = true
-            };
-            
-            var title = GetBetterFieldName(field.Name);
-
-            var description = new Label();
-            
-            if (Attribute.GetCustomAttribute(field, typeof(UiDescriptionAttribute)) is UiDescriptionAttribute desc)
-            {
-                title = desc.title;
-                description.Text = desc.description;
-                description.ForeColor = Color.Gray;
-                description.Height += 10;
-                description.AutoSize = true;
-            }  
-            
-            panel.Controls.Add(new Label
-            {
-                TextAlign = ContentAlignment.MiddleLeft,
-                Text = title,
-                Dock = DockStyle.Left,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                Width = 100
-            });
-
-            switch (fieldValue)
-            {
-                case int value:
-                {
-                    var upDown = new NumericUpDown
-                    {
-                        Dock = DockStyle.Fill,
-                        Anchor = AnchorStyles.Top | AnchorStyles.Right,
-                        Width = 360,
-                        Value = value
-                    };
-                    upDown.ValueChanged += (a, b) =>
-                    {
-                        field.SetValue(generator, (int) upDown.Value);
-                        InvokeGenerator();
-                    };
-
-                    panel.Controls.Add(upDown);
-                    break;
-                }
-                case bool value1:
-                {
-                    var upDown = new CheckBox
-                    {
-                        Dock = DockStyle.Fill, Anchor = AnchorStyles.Top | AnchorStyles.Right, Checked = value1
-                    };
-                    upDown.CheckedChanged += (a, b) =>
-                    {
-                        field.SetValue(generator, (bool) upDown.Checked);
-                        InvokeGenerator();
-                    };
-
-                    panel.Controls.Add(upDown);
-                    break;
-                }
-                case float floatValue:
-                {
-                    var upDown = new TrackBar
-                    {
-                        Dock = DockStyle.Fill,
-                        Anchor = AnchorStyles.Top | AnchorStyles.Right,
-                        Maximum = 100,
-                        Minimum = 0,
-                        Value = (int) (floatValue * 100.0f),
-                        TickFrequency = 10,
-                        Width = 360
-                    };
-                    upDown.ValueChanged += (a, b) =>
-                    {
-                        field.SetValue(generator, upDown.Value / 1e2f);
-                        InvokeGenerator();
-                    };
-
-                    panel.Controls.Add(upDown);
-                    break;
-                }
-            }
-
-            return new Control[] {description, panel};
-        }
-
-        /// <summary>
-        /// Generates a new name from standard class names
-        /// Example: SomeClassA --> some class a
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        private static string GetBetterFieldName(string name)
-        {
-            var groups = Regex.Match(name, @"([A-Z]*[a-z]+)([A-Z]+[a-z]*)|(.*)").Groups;
-
-            var newName = "";
-
-            for (var c = 1; c < groups.Count; c++)
-            {
-                newName += groups[c].Value.ToLower() + " ";
-            }
-
-            return newName;
-        }
-
         private static void Initialize(in Matrix matrix)
         {
             // Create new initial buffer and copy what ever was in the Gif buffer to it
-            _initialBuffer = CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.gifBuffer.Length);
-            FlipColorStoreRG_GR(_form.gifBuffer, _initialBuffer);
-
+            _initialBuffer = CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), MatrixDesignerMain.gifBuffer.Length);
+            FlipColorStoreRG_GR(MatrixDesignerMain.gifBuffer, _initialBuffer);
             // Set Generator args
             SetGlobalArgs(matrix.matrixWidth(),
                           matrix.matrixHeight(),
-                          _form.gifBuffer.Length - 1,
+                          MatrixDesignerMain.gifBuffer.Length - 1,
                           _initialBuffer,
-                          CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), _form.gifBuffer.Length)
+                          CreateImageRGB_NT(matrix.matrixWidth(), matrix.matrixHeight(), MatrixDesignerMain.gifBuffer.Length)
                     );
             
             // Create preview matrix
@@ -356,13 +293,14 @@ namespace Matrix_App
         /// Adds a separating line to the controls
         /// </summary>
         /// <param name="controlPanel"></param>
-        private static void CreateDivider(Control controlPanel, int height)
+        /// <param name="lineHeight"></param>
+        private static void CreateDivider(Control controlPanel, int lineHeight)
         {
             var divider = new Label
             {
                 BorderStyle = BorderStyle.Fixed3D, 
                 AutoSize = false, 
-                Height = height, 
+                Height = lineHeight, 
                 Width = 500
             };
 
@@ -383,7 +321,7 @@ namespace Matrix_App
                         {
                             var v = y / (float)height;
 
-                            _generator.ColorFragment(x, y, u, v, frame, out var r, out var g, out var b);
+                            _generator!.ColorFragment(x, y, u, v, frame, out var r, out var g, out var b);
 
                             var index = (x + y * width) * 3;
 

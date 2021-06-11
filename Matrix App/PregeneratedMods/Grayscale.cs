@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Matrix_App.PregeneratedMods.reflection;
 using static Matrix_App.GifGeneratorUtils;
 
 namespace Matrix_App.PregeneratedMods
 {
     public sealed class Grayscale : MatrixGifGenerator
     {
-        [UiDescriptionAttribute(title: "use Luminance", description: "Use luminance as defined by ITU-R BT.709 as grayscale output")]
-        public bool byLuminance = false;
+        [UiWidget]
+        [UiDescription(title: "use Luminance", description: "Use luminance as defined by ITU-R BT.709 as grayscale output")]
+        private bool byLuminance = false;
 
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
-            SampleFrame(actualStore, frame, x, y, width, out float lr, out float lg, out float lb);
+            SampleFrame(actualStore!, frame, x, y, width, out float lr, out float lg, out float lb);
 
             if (byLuminance)
             {

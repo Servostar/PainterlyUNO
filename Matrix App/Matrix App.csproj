@@ -38,5 +38,6 @@
     <EmbeddedResource Remove="SplashScreen.resx" />
     <None Remove="Resources\pfüsikuh.png" />
     <None Remove="Utils.cs~" />
+    <None Remove="Resources\pfüsikuh.png~" />
   </ItemGroup>
 </Project>

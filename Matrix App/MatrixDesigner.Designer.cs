@@ -10,13 +10,13 @@ namespace Matrix_App
         /// </summary>
         private System.ComponentModel.IContainer components = null;
         
-
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            IMAGE_DRAWER.Stop();
             MatrixGifGenerator.Close();
             commandQueue.Close();
             if (disposing && (components != null))
@@ -47,7 +47,6 @@ namespace Matrix_App
             this.label3 = new System.Windows.Forms.Label();
             this.FramesLabel = new System.Windows.Forms.Label();
             this.configButton = new System.Windows.Forms.Button();
-            this.read_me = new System.Windows.Forms.RichTextBox();
             this.DelayLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,7 +80,7 @@ namespace Matrix_App
             this.Play = new System.Windows.Forms.Button();
             this.Apply = new System.Windows.Forms.Button();
             this.DragDropButton = new System.Windows.Forms.Button();
-            this.matrixView = new Matrix_App.Matrix();
+            matrixView = new Matrix_App.Matrix();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Modus.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -140,7 +139,6 @@ namespace Matrix_App
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.FramesLabel);
             this.tabPage1.Controls.Add(this.configButton);
-            this.tabPage1.Controls.Add(this.read_me);
             this.tabPage1.Controls.Add(this.DelayLabel);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label2);
@@ -247,17 +245,6 @@ namespace Matrix_App
             this.configButton.Text = "Load";
             this.configButton.UseVisualStyleBackColor = true;
             this.configButton.Click += new System.EventHandler(this.ConfigButton_Click);
-            // 
-            // read_me
-            // 
-            this.read_me.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.read_me.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.read_me.Location = new System.Drawing.Point(0, 344);
-            this.read_me.Name = "read_me";
-            this.read_me.ReadOnly = true;
-            this.read_me.Size = new System.Drawing.Size(232, 291);
-            this.read_me.TabIndex = 5;
-            this.read_me.Text = "Reads Me";
             // 
             // DelayLabel
             // 
@@ -689,16 +676,16 @@ namespace Matrix_App
             // 
             // matrixView
             // 
-            this.matrixView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matrixView.Location = new System.Drawing.Point(16, 16);
-            this.matrixView.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.matrixView.Name = "matrixView";
-            this.matrixView.Size = new System.Drawing.Size(627, 557);
-            this.matrixView.TabIndex = 3;
+            matrixView.Dock = System.Windows.Forms.DockStyle.Fill;
+            matrixView.Location = new System.Drawing.Point(16, 16);
+            matrixView.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            matrixView.Name = "matrixView";
+            matrixView.Size = new System.Drawing.Size(627, 557);
+            matrixView.TabIndex = 3;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.matrixView);
+            this.panel3.Controls.Add(matrixView);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 0);
             this.panel3.Name = "panel3";
@@ -757,7 +744,6 @@ namespace Matrix_App
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox read_me;
         private System.Windows.Forms.Panel ToolBar;
         private System.Windows.Forms.NumericUpDown matrixHeight;
         private System.Windows.Forms.NumericUpDown matrixWidth;
@@ -782,7 +768,7 @@ namespace Matrix_App
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button configButton;
-        private Matrix matrixView;
+        private static Matrix matrixView;
         private System.Windows.Forms.TabPage pregeneratedMods;
         private System.Windows.Forms.FlowLayoutPanel pregeneratedModsBase;
         private System.Windows.Forms.Panel panel2;

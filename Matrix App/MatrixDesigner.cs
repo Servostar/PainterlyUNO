@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
@@ -44,8 +45,10 @@ namespace Matrix_App
         /// <summary>
         /// Gif like frame video buffer
         /// </summary>
-        public byte[][] gifBuffer = CreateImageRGB_NT(MatrixStartWidth, MatrixStartHeight, MatrixStartFrames);
-       
+        public static byte[][] gifBuffer = CreateImageRGB_NT(MatrixStartWidth, MatrixStartHeight, MatrixStartFrames);
+
+        public static readonly ThreadQueue IMAGE_DRAWER = new ThreadQueue("Matrix Image Drawer", 4);
+        
         #endregion
 
         #region Setup
@@ -595,24 +598,37 @@ namespace Matrix_App
 
         private void Timeline_ValueChanged(object sender, EventArgs e)
         {
-            int width = matrixView.matrixWidth();
-            int height = matrixView.matrixHeight();
-
-            for (int y = 0; y < height; y++)
+            var timeFrame = Timeline.Value;
+            
+            IMAGE_DRAWER.Enqueue(() =>
             {
-                int index = y * width;
+                WriteImage(gifBuffer[timeFrame]);
+                
+                var width = matrixView.matrixWidth();
+                var height = matrixView.matrixHeight();
 
-                for (int x = 0; x < width; x++)
+                lock (matrixView)
                 {
-                    int tmp = (index + x) * 3;
+                    for (var y = 0; y < height; y++)
+                    {
+                        var index = y * width;
 
-                    var color = Color.FromArgb(gifBuffer[Timeline.Value][tmp + 1], gifBuffer[Timeline.Value][tmp], gifBuffer[Timeline.Value][tmp + 2]);
+                        for (var x = 0; x < width; x++)
+                        {
+                            var tmp = (index + x) * 3;
 
-                    matrixView.SetPixelNoRefresh(x, y, color);
+                            var color = Color.FromArgb(gifBuffer[timeFrame][tmp + 1], gifBuffer[timeFrame][tmp], gifBuffer[timeFrame][tmp + 2]);
+
+                            matrixView.SetPixelNoRefresh(x, y, color);
+                        }
+                    }
                 }
-            }
+
+                matrixView.Refresh();
+
+                return true;
+            });
             matrixView.Refresh();
-            WriteImage(gifBuffer[Timeline.Value]);
         }
 
         /// <summary>
