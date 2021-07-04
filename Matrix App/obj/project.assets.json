@@ -11,11 +11,11 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Win32.Registry/5.0.0": {
+      "Microsoft.Win32.Registry/6.0.0-preview.5.21301.5": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
+          "System.Security.AccessControl": "6.0.0-preview.5.21301.5",
+          "System.Security.Principal.Windows": "6.0.0-preview.5.21301.5"
         },
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -30,6 +30,51 @@
           }
         }
       },
+      "runtime.linux-arm.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          }
+        }
+      },
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          }
+        }
+      },
+      "runtime.linux-x64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+        "type": "package",
+        "dependencies": {
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "6.0.0-preview.5.21301.5",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "6.0.0-preview.5.21301.5",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "6.0.0-preview.5.21301.5",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "6.0.0-preview.5.21301.5"
+        }
+      },
+      "runtime.osx-x64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          }
+        }
+      },
       "System.CodeDom/5.0.0": {
         "type": "package",
         "compile": {
@@ -39,10 +84,11 @@
           "lib/netstandard2.0/System.CodeDom.dll": {}
         }
       },
-      "System.IO.Ports/4.4.0": {
+      "System.IO.Ports/6.0.0-preview.5.21301.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.Registry": "4.4.0"
+          "Microsoft.Win32.Registry": "6.0.0-preview.5.21301.5",
+          "runtime.native.System.IO.Ports": "6.0.0-preview.5.21301.5"
         },
         "compile": {
           "ref/netstandard2.0/System.IO.Ports.dll": {}
@@ -51,6 +97,14 @@
           "lib/netstandard2.0/System.IO.Ports.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/linux/lib/netstandard2.0/System.IO.Ports.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard2.0/System.IO.Ports.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
           "runtimes/win/lib/netstandard2.0/System.IO.Ports.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -77,11 +131,10 @@
           }
         }
       },
-      "System.Security.AccessControl/5.0.0": {
+      "System.Security.AccessControl/6.0.0-preview.5.21301.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
+          "System.Security.Principal.Windows": "6.0.0-preview.5.21301.5"
         },
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -90,13 +143,13 @@
           "lib/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+          "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
         }
       },
-      "System.Security.Principal.Windows/5.0.0": {
+      "System.Security.Principal.Windows/6.0.0-preview.5.21301.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp3.0/_._": {}
@@ -136,48 +189,104 @@
         "version.txt"
       ]
     },
-    "Microsoft.Win32.Registry/5.0.0": {
-      "sha512": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+    "Microsoft.Win32.Registry/6.0.0-preview.5.21301.5": {
+      "sha512": "qYLtJIAEJJmY2vXxlVO8x4uXfgq7DFOHjpmnHlLm7kmAvyNFckYY/Dx5CZythBXvI2/7sratbIGKqSTysfgZ8A==",
       "type": "package",
-      "path": "microsoft.win32.registry/5.0.0",
+      "path": "microsoft.win32.registry/6.0.0-preview.5.21301.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/Microsoft.Win32.Registry.dll",
         "lib/net461/Microsoft.Win32.Registry.dll",
         "lib/net461/Microsoft.Win32.Registry.xml",
-        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "microsoft.win32.registry.5.0.0.nupkg.sha512",
+        "microsoft.win32.registry.6.0.0-preview.5.21301.5.nupkg.sha512",
         "microsoft.win32.registry.nuspec",
-        "ref/net46/Microsoft.Win32.Registry.dll",
         "ref/net461/Microsoft.Win32.Registry.dll",
         "ref/net461/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
         "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
         "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml"
+      ]
+    },
+    "runtime.linux-arm.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "VlGxrS0KZuoXA2zP/4JtcsnAUr66ivzLj2TdwXcaQ2vKTFOq9wCz7xYh08KvZVWXJKthpzhS+lWtdw/9vbVlgg==",
+      "type": "package",
+      "path": "runtime.linux-arm.runtime.native.system.io.ports/6.0.0-preview.5.21301.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.linux-arm.runtime.native.system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "runtime.linux-arm.runtime.native.system.io.ports.nuspec",
+        "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so"
+      ]
+    },
+    "runtime.linux-arm64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "fN2ienMgX5Gl8rmmmTkCxEBeN+KMEwHkTIE+4bHIH0sgPZJqrGV7o7sjjivZlv95L64cF+a4UVlxGqiMVEN6Nw==",
+      "type": "package",
+      "path": "runtime.linux-arm64.runtime.native.system.io.ports/6.0.0-preview.5.21301.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.linux-arm64.runtime.native.system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "runtime.linux-arm64.runtime.native.system.io.ports.nuspec",
+        "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so"
+      ]
+    },
+    "runtime.linux-x64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "wLbxixueLlN1bT3tHi4bnXhyp2tuyJ92TBBBwW01YS4isxkLr8o4f2AGw8YbsF4y2Fgx8RRQiipkG1EFrZ7AKg==",
+      "type": "package",
+      "path": "runtime.linux-x64.runtime.native.system.io.ports/6.0.0-preview.5.21301.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.linux-x64.runtime.native.system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "runtime.linux-x64.runtime.native.system.io.ports.nuspec",
+        "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so"
+      ]
+    },
+    "runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "9Int9JpQ3quVnY3nsUFmrcanozIrEMFAydF+v8KmDwh0CtPb2AZLyyRtNEC3Z1WmoF8qf+T7jWwuPlrfl338dw==",
+      "type": "package",
+      "path": "runtime.native.system.io.ports/6.0.0-preview.5.21301.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.native.system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "runtime.native.system.io.ports.nuspec"
+      ]
+    },
+    "runtime.osx-x64.runtime.native.System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "IhXEnQFgPxM/pUkEJkFBkr6XBkWFiuMGLlyl5BDG7LkJuGX4jAxJwL6n9Pue88ZyV45c0ajvuZOBnZJap+uIKA==",
+      "type": "package",
+      "path": "runtime.osx-x64.runtime.native.system.io.ports/6.0.0-preview.5.21301.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.osx-x64.runtime.native.system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "runtime.osx-x64.runtime.native.system.io.ports.nuspec",
+        "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib"
       ]
     },
     "System.CodeDom/5.0.0": {
@@ -204,26 +313,34 @@
         "version.txt"
       ]
     },
-    "System.IO.Ports/4.4.0": {
-      "sha512": "izaIWbjFZdik3ypDuA6GWj6fabhB+tR5M7QLcvAqd+I+VjI8UWoVZkh68Ao8Vf8poWWrCU875r3HQZnQW6a7GA==",
+    "System.IO.Ports/6.0.0-preview.5.21301.5": {
+      "sha512": "9jguTG3uxGLvERVKV6w8ctcaYktBv8ssZgl6xm1hI89BBIaU6WwC2SQt9ur+TT8UMxdu9ZG+QQMbCJKEKv9dnQ==",
       "type": "package",
-      "path": "system.io.ports/4.4.0",
+      "path": "system.io.ports/6.0.0-preview.5.21301.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.IO.Ports.dll",
+        "lib/net461/System.IO.Ports.xml",
         "lib/netstandard2.0/System.IO.Ports.dll",
+        "lib/netstandard2.0/System.IO.Ports.xml",
         "ref/net461/System.IO.Ports.dll",
         "ref/net461/System.IO.Ports.xml",
         "ref/netstandard2.0/System.IO.Ports.dll",
         "ref/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/linux/lib/netstandard2.0/System.IO.Ports.dll",
+        "runtimes/linux/lib/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/osx/lib/netstandard2.0/System.IO.Ports.dll",
+        "runtimes/osx/lib/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/win/lib/net461/System.IO.Ports.dll",
+        "runtimes/win/lib/net461/System.IO.Ports.xml",
         "runtimes/win/lib/netstandard2.0/System.IO.Ports.dll",
-        "system.io.ports.4.4.0.nupkg.sha512",
-        "system.io.ports.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/netstandard2.0/System.IO.Ports.xml",
+        "system.io.ports.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "system.io.ports.nuspec"
       ]
     },
     "System.Management/5.0.0": {
@@ -251,112 +368,70 @@
         "version.txt"
       ]
     },
-    "System.Security.AccessControl/5.0.0": {
-      "sha512": "dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+    "System.Security.AccessControl/6.0.0-preview.5.21301.5": {
+      "sha512": "EA9ul7nGN8oggMvloILnR+wnrbgLNZZQBYHq5nEq/ixwnKLV3M3Tbd1Jbj8oGck3XMj0owq81e4Jxp3s0IMICw==",
       "type": "package",
-      "path": "system.security.accesscontrol/5.0.0",
+      "path": "system.security.accesscontrol/6.0.0-preview.5.21301.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.xml",
-        "lib/netstandard1.3/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.xml",
-        "lib/uap10.0.16299/_._",
-        "ref/net46/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/System.Security.AccessControl.dll",
-        "ref/netstandard1.3/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
         "ref/netstandard2.0/System.Security.AccessControl.dll",
         "ref/netstandard2.0/System.Security.AccessControl.xml",
-        "ref/uap10.0.16299/_._",
-        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
-        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.5.0.0.nupkg.sha512",
-        "system.security.accesscontrol.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.xml",
+        "system.security.accesscontrol.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "system.security.accesscontrol.nuspec"
       ]
     },
-    "System.Security.Principal.Windows/5.0.0": {
-      "sha512": "t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+    "System.Security.Principal.Windows/6.0.0-preview.5.21301.5": {
+      "sha512": "ywwCqFAaRVbgqqORqYg8jdaX6NUEpzbuhxyUhAs+7mZ8AFAO4PzFYrZ5JPkYejXwougDldtbi0zOkk1lLzugLw==",
       "type": "package",
-      "path": "system.security.principal.windows/5.0.0",
+      "path": "system.security.principal.windows/6.0.0-preview.5.21301.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.xml",
-        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.xml",
-        "lib/uap10.0.16299/_._",
-        "ref/net46/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.xml",
         "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
         "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
-        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
         "ref/netstandard2.0/System.Security.Principal.Windows.dll",
         "ref/netstandard2.0/System.Security.Principal.Windows.xml",
-        "ref/uap10.0.16299/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
         "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
         "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
-        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
-        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.5.0.0.nupkg.sha512",
-        "system.security.principal.windows.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Principal.Windows.xml",
+        "system.security.principal.windows.6.0.0-preview.5.21301.5.nupkg.sha512",
+        "system.security.principal.windows.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "System.IO.Ports >= 3.1.0",
+      "System.IO.Ports >= 6.0.0-preview.5.21301.5",
       "System.Management >= 5.0.0"
     ]
   },
@@ -401,7 +476,7 @@
         "dependencies": {
           "System.IO.Ports": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[6.0.0-preview.5.21301.5, )"
           },
           "System.Management": {
             "target": "Package",
@@ -435,17 +510,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Matrix App depends on System.IO.Ports (>= 3.1.0) but System.IO.Ports 3.1.0 was not found. An approximate best match of System.IO.Ports 4.4.0 was resolved.",
-      "libraryId": "System.IO.Ports",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

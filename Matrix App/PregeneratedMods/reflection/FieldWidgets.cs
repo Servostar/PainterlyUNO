@@ -37,7 +37,6 @@ namespace Matrix_App.PregeneratedMods.reflection
                 title = desc.title;
                 description.Text = desc.description;
                 description.ForeColor = Color.Gray;
-                description.Height += 10;
                 description.AutoSize = true;
             }  
             
@@ -47,7 +46,6 @@ namespace Matrix_App.PregeneratedMods.reflection
                 Text = title,
                 Dock = DockStyle.Left,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                Width = 100
             });
 
             switch (fieldValue)
@@ -56,9 +54,9 @@ namespace Matrix_App.PregeneratedMods.reflection
                 {
                     var upDown = new NumericUpDown
                     {
+                        Width = 360,
                         Dock = DockStyle.Fill,
                         Anchor = AnchorStyles.Top | AnchorStyles.Right,
-                        Width = 360,
                         Value = value
                     };
                     upDown.ValueChanged += (a, b) =>
@@ -94,8 +92,8 @@ namespace Matrix_App.PregeneratedMods.reflection
                         Maximum = 100,
                         Minimum = 0,
                         Value = (int) (floatValue * 100.0f),
+                        Width = 360,
                         TickFrequency = 10,
-                        Width = 360
                     };
                     upDown.ValueChanged += (a, b) =>
                     {

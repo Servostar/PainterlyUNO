@@ -5,14 +5,14 @@ namespace Matrix_App
     {
         public const int PortNameUpdateInterval = 5000;
 
-        public const int MatrixStartWidth = 10;
-        public const int MatrixStartHeight = 10;
+        public const int MatrixStartWidth = 16;
+        public const int MatrixStartHeight = 16;
         public const int MatrixStartFrames = 1;
 
         public const int MatrixLimitedWidth = 512;
         public const int MatrixLimitedHeight = 512;
 
-        public const int BaudRate = 9600;
+        public const int BaudRate = 48000;
 
         public const int ReadTimeoutMs = 5500;
         public const int WriteTimeoutMs = 5500;
@@ -32,10 +32,10 @@ namespace Matrix_App
 
         public const int ArduinoSuccessByte = 21;
 
-        public const int ArduinoCommandQueueSize = 5;
+        public const int ArduinoCommandQueueSize = 2;
         public const int ArduinoReceiveBufferSize = 1 + 1 + 1 + MatrixLimitedWidth * MatrixLimitedHeight;
 
-        public const int DequeueWaitTimeoutCounter = 2;
+        public const int DequeueWaitTimeoutCounter = 3;
     }
 
     public static class ArduinoInstruction

@@ -145,4 +145,35 @@
   <data name="Pfüsikuh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Splashcreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+
+  <data name="DiamondOre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\diamond-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrassBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\grass-block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pumpkin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\pumpkin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedstoneLamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\redstone-lamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TNT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\tnt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueWool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\wool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommandBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\command-block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CreeperHead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\creeper-head.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmeraldBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\emerald-block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EndermanHead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\enderman-head.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
