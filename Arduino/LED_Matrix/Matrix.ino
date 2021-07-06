@@ -23,14 +23,6 @@ uint8_t height = STD_HEIGHT;
 
 uint32_t ledCount;
 
-uint8_t gamma8(uint8_t x) {
-    uint32_t x2 = (uint32_t) x;
-
-    x2 = x2 * x2 * 258 >> 16;
-
-    return (uint8_t) x2;
-}
-
 CRGB leds[MATRIX_LED_MAX_COUNT];
 
 typedef void (*FNPTR_t)();
@@ -42,7 +34,7 @@ uint8_t getByte() {
 
 uint16_t getWord() {
 	uint16_t highByte = getByte();
-	uint16_t lowByte = getByte();
+	uint16_t lowByte  = getByte();
 
 	return highByte << 8 | lowByte;
 }
@@ -51,7 +43,7 @@ void scale() {
 #ifdef DEBUG_PRINT_CALLBACK
   Serial.println("scale called");
 #endif
-	width = getByte();
+	width  = getByte();
 	height = getByte();
 
 #ifdef DEBUG_PRINT_CALLBACK
@@ -75,14 +67,11 @@ void scale() {
   Serial.println(ledCount);
 #endif
 
+	FastLED.addLeds<LED_TYPE, DATA_PIN, GRB>(leds, ledCount);
 
-	FastLED.addLeds<LED_TYPE, DATA_PIN>(leds, ledCount);
-
-  for (uint16_t x = 0; x < ledCount; x++) {
-    leds[x].r = 0;
-    leds[x].g = 0;
-    leds[x].b = 0;
-  }
+	for (uint16_t x = 0; x < ledCount; x++) {
+		leds[x] = 0;
+	}
 
 	FastLED.show();
 }
@@ -93,9 +82,9 @@ void single() {
 #endif
 	uint16_t index = getWord();
 
-	uint8_t green = gamma8(getByte());
-	uint8_t red = gamma8(getByte());
-	uint8_t blue = gamma8(getByte());
+	uint8_t green = getByte();
+	uint8_t red   = getByte();
+	uint8_t blue  = getByte();
 
 #ifdef DEBUG_PRINT_CALLBACK
 	Serial.print("Index: ");
@@ -120,12 +109,6 @@ void image() {
 
 	Serial.readBytes((char*) leds, ledCount * 3);
 
-  for (uint16_t x = 0; x < ledCount; x++) {
-    leds[x].r = gamma8(leds[x].r);
-    leds[x].g = gamma8(leds[x].g);
-    leds[x].b = gamma8(leds[x].b);
-  }
-
 	FastLED.show();
 }
 
@@ -134,9 +117,9 @@ void fill() {
   Serial.println("Called fill");
 #endif
 
-	uint8_t green = gamma8(getByte());
-	uint8_t red   = gamma8(getByte());
-	uint8_t blue  = gamma8(getByte());
+	uint8_t green = getByte();
+	uint8_t red   = getByte();
+	uint8_t blue  = getByte();
 
 #ifdef DEBUG_PRINT_CALLBACK
   Serial.print("Red: ");
@@ -176,19 +159,21 @@ FNPTR_t opcodeTable[] = {
 		image,   // opcode 0x02
 		fill,    // opcode 0x03
 		config	 // opcode 0x04
-		};
+	};
 
 void setup() {
 	ledCount = STD_LED_MAX_COUNT;
 
-	Serial.begin(9600);
+	Serial.begin(48000);
 
-	FastLED.addLeds<LED_TYPE, DATA_PIN>(leds, ledCount);
+	FastLED.addLeds<LED_TYPE, DATA_PIN, GRB>(leds, ledCount);
+	FastLED.setCorrection(TypicalLEDStrip);
+	FastLED.setBrightness(80);
+
 	for (uint16_t i = 0; i < ledCount; i++) {
-		leds[i].r = 0;
-		leds[i].g = 0;
-		leds[i].b = 0;
+		leds[i] = 0;
 	}
+
 	FastLED.show();
 }
 
@@ -207,7 +192,7 @@ void loop() {
 
 		if (opcode <= 4) {
 			opcodeTable[opcode]();
-			Serial.write(21);
+			Serial.write(75);
 		}
 	}
 }
