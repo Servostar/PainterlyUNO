@@ -524,8 +524,8 @@ namespace Matrix_App
 
                             matrixView.SetPixelNoRefresh(x, y, pixel);
 
-                            gifBuffer[i][index * 3] = pixel.G;
-                            gifBuffer[i][index * 3 + 1] = pixel.R;
+                            gifBuffer[i][index * 3 + 0] = pixel.R;
+                            gifBuffer[i][index * 3 + 1] = pixel.G;
                             gifBuffer[i][index * 3 + 2] = pixel.B;
                         }
                     }
@@ -547,8 +547,8 @@ namespace Matrix_App
 
                         int index = x + y * bitmap.Width;
 
-                        gifBuffer[Timeline.Value][index * 3] = pixel.G;
-                        gifBuffer[Timeline.Value][index * 3 + 1] = pixel.R;
+                        gifBuffer[Timeline.Value][index * 3 + 0] = pixel.R;
+                        gifBuffer[Timeline.Value][index * 3 + 1] = pixel.G;
                         gifBuffer[Timeline.Value][index * 3 + 2] = pixel.B;
                     }
                 }
@@ -633,8 +633,8 @@ namespace Matrix_App
 
                     var color = matrixView.GetPixel(x, y);
 
-                    gifBuffer[Timeline.Value][tmp] = color.G;
-                    gifBuffer[Timeline.Value][tmp + 1] = color.R;
+                    gifBuffer[Timeline.Value][tmp + 0] = color.R;
+                    gifBuffer[Timeline.Value][tmp + 1] = color.G;
                     gifBuffer[Timeline.Value][tmp + 2] = color.B;
                 }
             }
@@ -756,13 +756,27 @@ namespace Matrix_App
                 int width = data[0];
                 int height = data[1];
 
-                this.matrixWidth.Value = width;
-                this.matrixHeight.Value = height;
-
-                for (var x = 0; x < width * height * 3; x++)
+                matrixWidth.Value = width;
+                matrixHeight.Value = height;
+                
+                for (var y = 0; y < height; y++)
                 {
-                    gifBuffer[0][x] = data[2 + x];
+                    for (var x = 0; x < width; x++)
+                    {
+                        var i0 = x * 3 + y * width * 3;
+
+                        var x1 = height - y - 1;
+                        var y1 = width - x - 1;
+
+                        var i1 = x1 * 3 + y1 * width * 3;
+                    
+                        // degamma
+                        gifBuffer[0][i0 + 0] = (byte) MathF.Sqrt(data[i1 + 0 + 2] / 258.0f * 65536.0f);
+                        gifBuffer[0][i0 + 1] = (byte) MathF.Sqrt(data[i1 + 1 + 2] / 258.0f * 65536.0f);
+                        gifBuffer[0][i0 + 2] = (byte) MathF.Sqrt(data[i1 + 2 + 2] / 258.0f * 65536.0f);
+                    }
                 }
+
                 Timeline.Value = 1;
                 Timeline.Value = 0;
             }
@@ -835,7 +849,6 @@ namespace Matrix_App
                     gammaImage[i0 + 2] = rgbImageData[i1 + 2];
                 }
             }
-            
           
             for (var i = 0; i < rgbImageData.Length; i++)
             {

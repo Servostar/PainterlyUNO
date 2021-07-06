@@ -119,7 +119,13 @@ namespace Matrix_App
                     Text = FieldWidgets.GetBetterFieldName(generator.GetType().Name)
                 };
                 button.Width = anchor.ClientSize.Width - button.Margin.Right - button.Margin.Left;
-                button.Click += (sender, e) => OpenGeneratorUi(generator, matrix);
+                button.Click += (sender, e) =>
+                {
+                    lock (matrix)
+                    {
+                        OpenGeneratorUi(generator, matrix);
+                    }
+                };
                 button.Image = CreateSnapshot(generator);
                 button.TextImageRelation = TextImageRelation.ImageBeforeText;
                 button.TextAlign = ContentAlignment.MiddleRight;

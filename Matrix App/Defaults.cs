@@ -30,7 +30,7 @@ namespace Matrix_App
         public const int FilterPreviewWidth = 32;
         public const int FilterPreviewHeight = 32;
 
-        public const int ArduinoSuccessByte = 21;
+        public const int ArduinoSuccessByte = 75;
 
         public const int ArduinoCommandQueueSize = 2;
         public const int ArduinoReceiveBufferSize = 1 + 1 + 1 + MatrixLimitedWidth * MatrixLimitedHeight;

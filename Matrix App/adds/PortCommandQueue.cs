@@ -72,11 +72,7 @@ namespace Matrix_App
             } catch (ThreadInterruptedException)
             {
                 Thread.CurrentThread.Interrupt();
-            }
-            catch (Exception)
-            {
-                // omit
-            }
+            } 
         }
 
         [SecurityPermissionAttribute(SecurityAction.Demand, ControlThread = true)]
