@@ -25,7 +25,7 @@ namespace Matrix_App.PregeneratedMods
         
         [UiWidget]
         [UiDescription(title: "Rotation", description: "Rotate counter-clock-wise, repeating the image where needed (at corners)")]
-        private float rotation = 0.0f;
+        private int rotation = 0;
         
         [UiWidget]
         [UiDescription(title: "Skew X", description: "Skew the image on the x-axis")]
@@ -41,8 +41,8 @@ namespace Matrix_App.PregeneratedMods
         
         protected override void ColorFragment(in int x, in int y, in float u, in float v, in int frame, out float r, out float g, out float b)
         {
-            var sint = MathF.Sin(rotation * MathF.PI * 2.0f);
-            var cost = MathF.Cos(rotation * MathF.PI * 2.0f);
+            var sint = MathF.Sin(rotation / 180.0f * MathF.PI);
+            var cost = MathF.Cos(rotation / 180.0f * MathF.PI);
 
             var tx = x;
             var ty = y;

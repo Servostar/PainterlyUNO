@@ -57,7 +57,8 @@ namespace Matrix_App.PregeneratedMods.reflection
                         Width = 360,
                         Dock = DockStyle.Fill,
                         Anchor = AnchorStyles.Top | AnchorStyles.Right,
-                        Value = value
+                        Value = value,
+                        Maximum = 1000
                     };
                     upDown.ValueChanged += (a, b) =>
                     {
