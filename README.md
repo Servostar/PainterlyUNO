@@ -19,4 +19,4 @@ Features
 Microcontroller
 -
 Preferrably an Arduino UNO, since this is the prime target device.
-Working production code for Arduino UNO can be found in ./arduino
+Working production code for Arduino UNO can be found in ./Arduino
