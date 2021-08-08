@@ -36,3 +36,48 @@ F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matri
 F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
 F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
 F:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netstandard2.0\System.IO.Ports.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netstandard2.0\System.IO.Ports.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csprojAssemblyReference.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.ColorWheel.resources
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.forms.Settings.resources
+E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Bluetooth.dll

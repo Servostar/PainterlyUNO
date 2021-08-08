@@ -2,53 +2,52 @@
 #define DEBUG_ENABLED
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using System.IO.Ports;
-using System.Timers;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Management;
-using System.Text.RegularExpressions;
-
+using System.IO.Ports;
+using System.Timers;
+using System.Windows.Forms;
+using Matrix_App.adds;
+using Matrix_App.forms;
+using Matrix_App.Properties;
+using Matrix_App.Themes;
 using static Matrix_App.Defaults;
 using static Matrix_App.ArduinoInstruction;
 using static Matrix_App.Utils;
-using Matrix_App.Themes;
 using Timer = System.Timers.Timer;
 
 namespace Matrix_App
 {
     public partial class MatrixDesignerMain : Form
     {
+        private void PortsOnClick(object? sender, EventArgs e)
+        {
+            new Settings(ref commandQueue, ref port);
+        }
+
         #region Private-Members
 
         /// <summary>
-        /// Port update Timer
-        /// Reloads available port names at consecutive rates
+        ///     Port update Timer
+        ///     Reloads available port names at consecutive rates
         /// </summary>
-        private Timer? portNameUpdater;
         private Timer? delay;
-
-        private static SerialPort _port = new SerialPort();
-
-        private uint portNumber;
 
         private bool runningGif;
 
-        private readonly PortCommandQueue commandQueue = new PortCommandQueue(ref _port);
-        private readonly Regex comRegex = new Regex(@"COM[\d]+");
+        private static SerialPort port = new();
+
+        private PortCommandQueue commandQueue = new(ref port);
+
         /// <summary>
-        /// Gif like frame video buffer
+        ///     Gif like frame video buffer
         /// </summary>
         public static byte[][] gifBuffer = CreateImageRGB_NT(MatrixStartWidth, MatrixStartHeight, MatrixStartFrames);
 
-        public static readonly ThreadQueue IMAGE_DRAWER = new ThreadQueue("Matrix Image Drawer", 4);
-        
+        public static readonly ThreadQueue IMAGE_DRAWER = new("Matrix Image Drawer", 4);
+
         #endregion
 
         #region Setup
@@ -61,7 +60,7 @@ namespace Matrix_App
             matrixView.Instance(this);
             // Generate filter access buttons
             MatrixGifGenerator.GenerateBaseUi(pregeneratedModsBase, matrixView, this);
-            
+
             Init();
             // apply light-mode by default
             new LightMode().ApplyTheme(this);
@@ -71,12 +70,6 @@ namespace Matrix_App
 
         private void Init()
         {
-            // Create port name update timer
-            portNameUpdater = new Timer(PortNameUpdateInterval);
-            portNameUpdater.Elapsed += UpdatePortNames;
-            portNameUpdater.AutoReset = true;
-            portNameUpdater.Enabled = true;
-            
             // create gif playback timer
             delay = new Timer((int) Delay.Value);
             delay.Elapsed += Timelineupdate;
@@ -86,42 +79,42 @@ namespace Matrix_App
             ZeichnenFarbRad.handler = ColorWheel_Handler!;
 
             // setup port settings
-            _port.BaudRate = BaudRate;
-            _port.ReadTimeout = ReadTimeoutMs;
-            _port.WriteTimeout = WriteTimeoutMs;
+            port.BaudRate = BaudRate;
+            port.ReadTimeout = ReadTimeoutMs;
+            port.WriteTimeout = WriteTimeoutMs;
+            port.Parity = Parity.None;
+            port.DataBits = 8;
+            port.StopBits = StopBits.One;
 
             // setup matrix
             AdjustMatrixTable();
 
             // search for initial ports
-            GatherPortNames();
+            //GatherPortNames();
 
             HideEasterEgg();
         }
 
         private void HideEasterEgg()
         {
-            if (((int) DateTime.Now.DayOfWeek) != 3) 
+            if (DateTime.Now.DayOfWeek != DayOfWeek.Wednesday)
                 return;
-            
+
             if (new Random().Next(0, 9) >= 1)
                 return;
-            
-            using (Bitmap wednesdayFrog = new Bitmap(Properties.Resources.Frosch))
+
+            using (Bitmap wednesdayFrog = new(Resources.Frosch))
             {
                 matrixWidth.Value = wednesdayFrog.Width;
                 matrixHeight.Value = wednesdayFrog.Height;
                 ResizeGif();
-                
+
                 for (var x = 0; x < wednesdayFrog.Width; x++)
+                for (var y = 0; y < wednesdayFrog.Height; y++)
                 {
-                    for (var y = 0; y < wednesdayFrog.Height; y++)
-                    {
-                        var pixel = wednesdayFrog.GetPixel(x, y);
+                    var pixel = wednesdayFrog.GetPixel(x, y);
 
-                        matrixView.SetPixelNoRefresh(x, y, pixel);
-
-                    }
+                    matrixView.SetPixelNoRefresh(x, y, pixel);
                 }
             }
 
@@ -133,164 +126,31 @@ namespace Matrix_App
         #region UI-Methods
 
         #region Port-ComboBox
-        /// <summary>
-        /// Updates the port names to newest available ports.
-        /// Called by <see cref="portNameUpdater"/>.
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="e"></param>
-        private void UpdatePortNames(object source, ElapsedEventArgs e)
-        {
-            if (Ports.InvokeRequired)
-            {
-                // invoke on the combo-boxes thread
-                Ports.Invoke(new Action(GatherPortNames));
-            }
-            else
-            {
-                // run on this thread
-                GatherPortNames();
-            }
-        }
 
-        /// <summary>
-        /// Gathers all available ports and sets them to the combobox <see cref="Ports"/>
-        /// </summary>
-        [SuppressMessage("ReSharper", "CoVariantArrayConversion", Justification = "Never got an exception, so seems to be just fine")]
-        private void GatherPortNames()
-        {
-            var ports = SerialPort.GetPortNames();
-            // save previously selected 
-            var selected = this.Ports.SelectedItem;
-            // get device names from ports
-            var newPorts = GetDeviceNames(ports);
-            // add virtual port
-            newPorts.AddLast("Virtual-Unlimited (COM257)");
-
-            // search for new port
-            foreach (var newPort in newPorts)
-            {
-                // find any new port
-                var found = Ports.Items.Cast<object?>().Any(oldPort => (string) oldPort! == newPort);
-
-                // some port wasn't found, recreate list
-                if (!found)
-                {
-                    commandQueue.InvalidatePort();
-
-                    Ports.Items.Clear();
-
-                    Ports.Items.AddRange(newPorts.ToArray()!);
-
-                    // select previously selected port if port is still accessible
-                    if (selected != null && Ports.Items.Contains(selected))
-                    {
-                        Ports.SelectedItem = selected;
-                    } else
-                    {
-                        Ports.SelectedIndex = 0;
-                    }
-                    break;
-                }
-            }
-        }
-
-        private static LinkedList<string> GetDeviceNames(string[] ports)
-        {
-            ManagementClass processClass = new ManagementClass("Win32_PnPEntity");
-            ManagementObjectCollection devicePortNames = processClass.GetInstances();
-
-            var newPorts = new LinkedList<string>();
-
-            foreach (var currentPort in ports)
-            {
-                foreach (var o in devicePortNames)
-                {
-                    var name = ((ManagementObject) o).GetPropertyValue("Name");
-                    
-                    if (name == null || !name.ToString()!.Contains(currentPort)) 
-                        continue;
-                    
-                    newPorts.AddLast(name.ToString()!);
-                    break;
-                }
-            }
-
-            return newPorts;
-        }
-
-        /// <summary>
-        /// Invoked when the selected port has changed.
-        /// Applies the new port settings.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Ports_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lock (_port)
-            {
-                if (_port.IsOpen)
-                {
-                    _port.Close();
-                }
-                
-                var item = (string)((ComboBox)sender).SelectedItem;
-                if (item != null)
-                {
-                    // extract port
-                    var matches = comRegex.Matches(item);
-                        
-                    if(matches.Count > 0)
-                    {
-                        // only select valid port numbers (up to (including) 256)
-                        portNumber = UInt32.Parse(matches[0].Value.Split('M')[1]);
-
-                        if (portNumber <= 256)
-                        {
-                            // set valid port
-                            _port.PortName = matches[0].Value;
-                            commandQueue.ValidatePort();
-                        } else if (portNumber == 257)
-                        {
-                            // virtual mode, increase limitations as no real arduino is connected
-                            matrixWidth.Maximum = MatrixLimitedWidth;
-                            matrixHeight.Maximum = MatrixLimitedHeight;
-                                
-                            commandQueue.InvalidatePort();
-                        } else
-                        {
-                            // no port selected reset settings
-                            matrixWidth.Maximum = MatrixStartWidth;
-                            matrixHeight.Maximum = MatrixStartHeight;
-                        }
-                    }
-                }
-            }
-        }
-       
         #endregion
 
         #region Scale
+
         /// <summary>
-        /// Applies a new size to the gif and matrix
+        ///     Applies a new size to the gif and matrix
         /// </summary>
         private void AdjustMatrixTable()
         {
-            int width = (int)this.matrixWidth.Value;
-            int height = (int)this.matrixHeight.Value;
+            var width = (int) matrixWidth.Value;
+            var height = (int) matrixHeight.Value;
 
             matrixView.resize(width, height);
             ResizeGif();
-           // Delay.Minimum = Math.Min(Width.Value * Height.Value * 5, 500);
+            // Delay.Minimum = Math.Min(Width.Value * Height.Value * 5, 500);
         }
 
         private void Width_ValueChanged(object sender, EventArgs e)
         {
             AdjustMatrixTable();
             commandQueue.EnqueueArduinoCommand(
-                OpcodeScale,  // opcode
-                (byte)matrixWidth.Value,
-                (byte)matrixHeight.Value
+                OpcodeScale, // opcode
+                (byte) matrixWidth.Value,
+                (byte) matrixHeight.Value
             );
         }
 
@@ -298,9 +158,9 @@ namespace Matrix_App
         {
             AdjustMatrixTable();
             commandQueue.EnqueueArduinoCommand(
-                OpcodeScale,  // opcode
-                (byte)matrixWidth.Value,
-                (byte)matrixHeight.Value
+                OpcodeScale, // opcode
+                (byte) matrixWidth.Value,
+                (byte) matrixHeight.Value
             );
         }
 
@@ -309,20 +169,25 @@ namespace Matrix_App
         #region Edit/Draw
 
         #region TextBoxen
+
         private void DrawTextBoxRed_KeyUp(object sender, KeyEventArgs e)
         {
             if (int.TryParse(ZeichnenTextBoxRed.Text, out var value) && value < 256 && value >= 0)
             {
                 ZeichnenTrackBarRed.Value = value;
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
             else if (value >= 256)
             {
                 ZeichnenTrackBarRed.Value = 255;
                 ZeichnenTextBoxRed.Text = @"255";
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
+
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
 
         private void DrawTextBoxGreen_KeyUp(object sender, KeyEventArgs e)
@@ -330,16 +195,19 @@ namespace Matrix_App
             if (int.TryParse(ZeichnenTextBoxGreen.Text, out var value) && value < 256 && value >= 0)
             {
                 ZeichnenTrackBarGreen.Value = value;
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
             else if (value >= 256)
             {
                 ZeichnenTrackBarGreen.Value = 255;
                 ZeichnenTextBoxGreen.Text = @"255";
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
 
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
 
         private void DrawTextBoxBlue_KeyUp(object sender, KeyEventArgs e)
@@ -347,44 +215,56 @@ namespace Matrix_App
             if (int.TryParse(ZeichnenTextBoxBlue.Text, out var value) && value < 256 && value >= 0)
             {
                 ZeichnenTrackBarBlue.Value = value;
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
             else if (value >= 256)
             {
                 ZeichnenTrackBarBlue.Value = 255;
                 ZeichnenTextBoxBlue.Text = @"255";
-                ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
+                ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                    (byte) ZeichnenTrackBarBlue.Value);
             }
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
 
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
+
         #endregion
 
         #region TackBars
+
         private void ZeichnenTrackBarRed_Scroll(object sender, EventArgs e)
         {
             ZeichnenTextBoxRed.Text = ZeichnenTrackBarRed.Value.ToString();
-            ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
+            ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                (byte) ZeichnenTrackBarBlue.Value);
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
 
         private void ZeichnenTrackBarGreen_Scroll(object sender, EventArgs e)
         {
             ZeichnenTextBoxGreen.Text = ZeichnenTrackBarGreen.Value.ToString();
-            ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
+            ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                (byte) ZeichnenTrackBarBlue.Value);
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
 
         private void ZeichnenTrackBarBlue_Scroll(object sender, EventArgs e)
         {
             ZeichnenTextBoxBlue.Text = ZeichnenTrackBarBlue.Value.ToString();
-            ZeichnenFarbRad.setRGB((byte)ZeichnenTrackBarRed.Value, (byte)ZeichnenTrackBarGreen.Value, (byte)ZeichnenTrackBarBlue.Value);
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
+            ZeichnenFarbRad.setRGB((byte) ZeichnenTrackBarRed.Value, (byte) ZeichnenTrackBarGreen.Value,
+                (byte) ZeichnenTrackBarBlue.Value);
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
+
         #endregion
 
         /// <summary>
-        /// Sets a new color to the edit tab
+        ///     Sets a new color to the edit tab
         /// </summary>
         /// <param name="color"></param>
         public void SetColor(Color color)
@@ -401,7 +281,7 @@ namespace Matrix_App
         }
 
         /// <summary>
-        /// Updates trackbars and RGB-textboxes according to color wheel settings
+        ///     Updates trackbars and RGB-textboxes according to color wheel settings
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -415,30 +295,32 @@ namespace Matrix_App
             ZeichnenTextBoxGreen.Text = ZeichnenFarbRad.getGreen().ToString();
             ZeichnenTextBoxBlue.Text = ZeichnenFarbRad.getBlue().ToString();
 
-            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value));
+            matrixView.SetPaintColor(Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value));
         }
 
         /// <summary>
-        /// Fills the entire Matrix with a color
+        ///     Fills the entire Matrix with a color
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DrawFill_Click(object sender, EventArgs e)
         {
-            var color = Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value, ZeichnenTrackBarBlue.Value);
+            var color = Color.FromArgb(ZeichnenTrackBarRed.Value, ZeichnenTrackBarGreen.Value,
+                ZeichnenTrackBarBlue.Value);
             matrixView.SetPaintColor(color);
             matrixView.Fill(color);
 
             commandQueue.EnqueueArduinoCommand(
-                 OpcodeFill, // Opcode
-                (byte)ZeichnenTrackBarRed.Value,   // Red
-                (byte)ZeichnenTrackBarGreen.Value,// Green
-                (byte)ZeichnenTrackBarBlue.Value   // Blue
-             );
+                OpcodeFill, // Opcode
+                (byte) ZeichnenTrackBarGreen.Value, // Red
+                (byte) ZeichnenTrackBarRed.Value, // Green
+                (byte) ZeichnenTrackBarBlue.Value // Blue
+            );
         }
 
         /// <summary>
-        /// Sets the entire Matrix to black
+        ///     Sets the entire Matrix to black
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -447,25 +329,25 @@ namespace Matrix_App
             matrixView.Fill(Color.Black);
 
             commandQueue.EnqueueArduinoCommand(
-                OpcodeFill,  // opcode
-                0,  // red
-                0,  // green
-                0   // blue
+                OpcodeFill, // opcode
+                0, // red
+                0, // green
+                0 // blue
             );
         }
 
         #endregion
 
         #region Image-Drag-Drop
-        
+
         /// <summary>
-        /// Handles click event, opens a file dialog to choose and image file
+        ///     Handles click event, opens a file dialog to choose and image file
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DragDrop_Click(object sender, EventArgs e)
         {
-            using OpenFileDialog openFileDialog = new OpenFileDialog
+            using OpenFileDialog openFileDialog = new()
             {
                 InitialDirectory = "c:\\",
                 Filter = @"image files (*.PNG;*.JPG;*.GIF)|*.*",
@@ -482,8 +364,8 @@ namespace Matrix_App
         }
 
         /// <summary>
-        /// Loads an image file froim disk and sets the matrix to it.
-        /// If the image is an gif, the gif buffer will be set to the gif, as well as the matrix itself.
+        ///     Loads an image file froim disk and sets the matrix to it.
+        ///     If the image is an gif, the gif buffer will be set to the gif, as well as the matrix itself.
         /// </summary>
         /// <param name="filePath"></param>
         private void LoadFromFile(string filePath)
@@ -496,9 +378,9 @@ namespace Matrix_App
                 var frames = Math.Min(gif.GetFrameCount(FrameDimension.Time), 120);
 
                 if (gif.GetFrameCount(FrameDimension.Time) > 120)
-                {
-                    MessageBox.Show(@"Das Gif ist zu Groß. Die Maximalgröße sind 120 Frames. Das Gif wird abgeschnitten sein, damit es in die Maximalgröße passt.", @"Gif to large");
-                }
+                    MessageBox.Show(
+                        @"Das Gif ist zu Groß. Die Maximalgröße sind 120 Frames. Das Gif wird abgeschnitten sein, damit es in die Maximalgröße passt.",
+                        @"Gif to large");
 
                 FrameCount.Value = frames;
                 Timeline.Maximum = frames - 1;
@@ -515,44 +397,41 @@ namespace Matrix_App
 
                     // fetch each pixel and store
                     for (var x = 0; x < bitmap.Width; x++)
+                    for (var y = 0; y < bitmap.Height; y++)
                     {
-                        for (var y = 0; y < bitmap.Height; y++)
-                        {
-                            var pixel = bitmap.GetPixel(x, y);
+                        var pixel = bitmap.GetPixel(x, y);
 
-                            var index = x + y * bitmap.Width;
+                        var index = x + y * bitmap.Width;
 
-                            matrixView.SetPixelNoRefresh(x, y, pixel);
+                        matrixView.SetPixelNoRefresh(x, y, pixel);
 
-                            gifBuffer[i][index * 3 + 0] = pixel.R;
-                            gifBuffer[i][index * 3 + 1] = pixel.G;
-                            gifBuffer[i][index * 3 + 2] = pixel.B;
-                        }
+                        gifBuffer[i][index * 3 + 0] = pixel.R;
+                        gifBuffer[i][index * 3 + 1] = pixel.G;
+                        gifBuffer[i][index * 3 + 2] = pixel.B;
                     }
                 }
+
                 matrixView.Refresh();
                 Timeline.Value = 0;
-               
             }
             else
             {
                 Bitmap bitmap = ResizeImage(new Bitmap(filePath), matrixView.matrixWidth(), matrixView.matrixHeight());
                 matrixView.SetImage(bitmap);
 
-                for (int x = 0; x < bitmap.Width; x++)
+                for (var x = 0; x < bitmap.Width; x++)
+                for (var y = 0; y < bitmap.Height; y++)
                 {
-                    for (int y = 0; y < bitmap.Height; y++)
-                    {
-                        var pixel = bitmap.GetPixel(x, y);
+                    var pixel = bitmap.GetPixel(x, y);
 
-                        int index = x + y * bitmap.Width;
+                    var index = x + y * bitmap.Width;
 
-                        gifBuffer[Timeline.Value][index * 3 + 0] = pixel.R;
-                        gifBuffer[Timeline.Value][index * 3 + 1] = pixel.G;
-                        gifBuffer[Timeline.Value][index * 3 + 2] = pixel.B;
-                    }
+                    gifBuffer[Timeline.Value][index * 3 + 0] = pixel.R;
+                    gifBuffer[Timeline.Value][index * 3 + 1] = pixel.G;
+                    gifBuffer[Timeline.Value][index * 3 + 2] = pixel.B;
                 }
             }
+
             WriteImage(gifBuffer[Timeline.Value]);
         }
 
@@ -566,14 +445,14 @@ namespace Matrix_App
 
         private void DragDrop_DragDrop(object sender, DragEventArgs e)
         {
-            string[] picturePath = (string[])e.Data.GetData(DataFormats.FileDrop);
+            string[] picturePath = (string[]) e.Data.GetData(DataFormats.FileDrop);
 
             LoadFromFile(picturePath[0]);
         }
+
         #endregion
 
         #region Timeline
-
 
         public void ResetTimeline()
         {
@@ -583,7 +462,7 @@ namespace Matrix_App
 
         public int GetDelayTime()
         {
-            return (int)Delay.Value;
+            return (int) Delay.Value;
         }
 
         private void FrameCount_ValueChanged(object sender, EventArgs e)
@@ -597,16 +476,16 @@ namespace Matrix_App
             else
             {
                 Timeline.Enabled = true;
-                Timeline.Maximum = (int)FrameCount.Value - 1;
+                Timeline.Maximum = (int) FrameCount.Value - 1;
             }
         }
 
         private void Timeline_ValueChanged(object sender, EventArgs e)
         {
             var timeFrame = Timeline.Value;
-            
+
             WriteImage(gifBuffer[timeFrame]);
-            
+
             lock (matrixView)
             {
                 matrixView.SetImage(gifBuffer[timeFrame]);
@@ -614,22 +493,22 @@ namespace Matrix_App
         }
 
         /// <summary>
-        /// Stores the current matrix at the index noted by the timeline into the Gif
+        ///     Stores the current matrix at the index noted by the timeline into the Gif
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Apply_Click(object sender, EventArgs e)
         {
-            int width = matrixView.matrixWidth();
-            int height = matrixView.matrixHeight();
+            var width = matrixView.matrixWidth();
+            var height = matrixView.matrixHeight();
 
-            for (int y = 0; y < height; y++)
+            for (var y = 0; y < height; y++)
             {
-                int i = y * width;
+                var i = y * width;
 
-                for (int x = 0; x < width; x++)
+                for (var x = 0; x < width; x++)
                 {
-                    int tmp = (i + x) * 3;
+                    var tmp = (i + x) * 3;
 
                     var color = matrixView.GetPixel(x, y);
 
@@ -640,27 +519,21 @@ namespace Matrix_App
             }
         }
 
-        private void Timelineupdate(Object source, ElapsedEventArgs e)
+        private void Timelineupdate(object source, ElapsedEventArgs e)
         {
             if (Timeline.InvokeRequired)
-            {
                 // invoke on the combo-boxes thread
                 Timeline.Invoke(new Action(() =>
                 {
                     if (Timeline.Value < Timeline.Maximum)
-                    {
                         Timeline.Value = Timeline.Value + 1;
-                    }
                     else
-                    {
                         Timeline.Value = 0;
-                    }
                 }));
-            }
         }
 
         /// <summary>
-        /// Starts playing the timeline
+        ///     Starts playing the timeline
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -674,19 +547,19 @@ namespace Matrix_App
                     Timeline.Value = 0;
 
                     runningGif = true;
-                    
+
                     if (delay != null)
                         delay.Enabled = true;
 
-                    Play.Image = new Bitmap(Properties.Resources.Stop);
+                    Play.Image = new Bitmap(Resources.Stop);
                 }
                 else
                 {
-                    Play.Image = new Bitmap(Properties.Resources.Play);
+                    Play.Image = new Bitmap(Resources.Play);
                     Play.Text = @"Play";
                     runningGif = false;
-                    
-                    if (delay != null) 
+
+                    if (delay != null)
                         delay.Enabled = false;
                 }
             }
@@ -695,27 +568,27 @@ namespace Matrix_App
         private void Timeline_MouseDown(object sender, MouseEventArgs e)
         {
             if (!runningGif) return;
-            Play.Image = new Bitmap(Properties.Resources.Play);
+            Play.Image = new Bitmap(Resources.Play);
             Play.Text = @"Play";
             runningGif = false;
-                
-            if (delay != null) 
+
+            if (delay != null)
                 delay.Enabled = false;
         }
 
         private void Delay_ValueChanged(object sender, EventArgs _)
         {
-            if (delay != null) 
+            if (delay != null)
                 delay.Interval = (int) Delay.Value;
         }
 
         #endregion
 
         #region Properties
-        
+
         private void Save_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog
+            SaveFileDialog save = new()
             {
                 InitialDirectory = "c:\\",
                 Filter = @"image files (*.PNG;*.JPG;*.GIF)|*.*",
@@ -727,20 +600,23 @@ namespace Matrix_App
             {
                 string filePath = save.FileName;
                 Bitmap[] gifBitmap = new Bitmap[gifBuffer.Length];
-                GifWriter writer = new GifWriter(File.Create(filePath));
+                GifWriter writer = new(File.Create(filePath));
                 for (var i = 0; i < FrameCount.Value; i++)
                 {
-                    gifBitmap[i] = new Bitmap((int)matrixWidth.Value, (int)matrixHeight.Value);
+                    gifBitmap[i] = new Bitmap((int) matrixWidth.Value, (int) matrixHeight.Value);
 
                     for (var j = 0; j < gifBuffer[i].Length / 3; j++)
                     {
                         var y = j / (int) matrixWidth.Value;
                         var x = j % (int) matrixWidth.Value;
 
-                        gifBitmap[i].SetPixel(x, y, Color.FromArgb(gifBuffer[i][j * 3], gifBuffer[i][j * 3 + 1], gifBuffer[i][j * 3 + 2]));
+                        gifBitmap[i].SetPixel(x, y,
+                            Color.FromArgb(gifBuffer[i][j * 3], gifBuffer[i][j * 3 + 1], gifBuffer[i][j * 3 + 2]));
                     }
-                    writer.WriteFrame(gifBitmap[i], (int)Delay.Value);
+
+                    writer.WriteFrame(gifBitmap[i], (int) Delay.Value);
                 }
+
                 writer.Dispose();
             }
         }
@@ -748,7 +624,7 @@ namespace Matrix_App
         private void ConfigButton_Click(object sender, EventArgs e)
         {
             commandQueue.EnqueueArduinoCommand(4);
-            commandQueue.WaitForLastDequeue();
+            PortCommandQueue.WaitForLastDequeue();
             byte[] data = commandQueue.GetLastData();
 
             if (commandQueue.GetMark() > 0)
@@ -758,23 +634,21 @@ namespace Matrix_App
 
                 matrixWidth.Value = width;
                 matrixHeight.Value = height;
-                
+
                 for (var y = 0; y < height; y++)
+                for (var x = 0; x < width; x++)
                 {
-                    for (var x = 0; x < width; x++)
-                    {
-                        var i0 = x * 3 + y * width * 3;
+                    var i0 = x * 3 + y * width * 3;
 
-                        var x1 = height - y - 1;
-                        var y1 = width - x - 1;
+                    var x1 = height - y - 1;
+                    var y1 = width - x - 1;
 
-                        var i1 = x1 * 3 + y1 * width * 3;
-                    
-                        // degamma
-                        gifBuffer[0][i0 + 0] = (byte) MathF.Sqrt(data[i1 + 0 + 2] / 258.0f * 65536.0f);
-                        gifBuffer[0][i0 + 1] = (byte) MathF.Sqrt(data[i1 + 1 + 2] / 258.0f * 65536.0f);
-                        gifBuffer[0][i0 + 2] = (byte) MathF.Sqrt(data[i1 + 2 + 2] / 258.0f * 65536.0f);
-                    }
+                    var i1 = x1 * 3 + y1 * width * 3;
+
+                    // degamma
+                    gifBuffer[0][i0 + 0] = (byte) MathF.Sqrt(data[i1 + 0 + 2] / 258.0f * 65536.0f);
+                    gifBuffer[0][i0 + 1] = (byte) MathF.Sqrt(data[i1 + 1 + 2] / 258.0f * 65536.0f);
+                    gifBuffer[0][i0 + 2] = (byte) MathF.Sqrt(data[i1 + 2 + 2] / 258.0f * 65536.0f);
                 }
 
                 Timeline.Value = 1;
@@ -794,16 +668,14 @@ namespace Matrix_App
         }
 
         /// <summary>
-        /// Resizes the Gif image buffer
+        ///     Resizes the Gif image buffer
         /// </summary>
         private void ResizeGif()
         {
-            int frames = (int)FrameCount.Value;
+            var frames = (int) FrameCount.Value;
             gifBuffer = new byte[frames + 1][];
-            for (int i = 0; i <= frames; i++)
-            {
+            for (var i = 0; i <= frames; i++)
                 gifBuffer[i] = new byte[matrixView.matrixWidth() * matrixView.matrixHeight() * 3];
-            }
         }
 
         #endregion
@@ -834,32 +706,29 @@ namespace Matrix_App
             var height = matrixView.matrixHeight();
 
             for (var y = 0; y < height; y++)
+            for (var x = 0; x < width; x++)
             {
-                for (var x = 0; x < width; x++)
-                {
-                    var i0 = x * 3 + y * width * 3;
+                var i0 = x * 3 + y * width * 3;
 
-;                   var x1 = height - y - 1;
-                    var y1 = width - x - 1;
+                ;
+                var x1 = height - y - 1;
+                var y1 = width - x - 1;
 
-                    var i1 = x1 * 3 + y1 * width * 3;
-                    
-                    gammaImage[i0 + 0] = rgbImageData[i1 + 0];
-                    gammaImage[i0 + 1] = rgbImageData[i1 + 1];
-                    gammaImage[i0 + 2] = rgbImageData[i1 + 2];
-                }
+                var i1 = x1 * 3 + y1 * width * 3;
+
+                gammaImage[i0 + 0] = rgbImageData[i1 + 0];
+                gammaImage[i0 + 1] = rgbImageData[i1 + 1];
+                gammaImage[i0 + 2] = rgbImageData[i1 + 2];
             }
-          
+
             for (var i = 0; i < rgbImageData.Length; i++)
-            {
-                gammaImage[i] = (byte) (gammaImage[i] * gammaImage[i] * 258 >> 16);
-            }
-            
+                gammaImage[i] = (byte) ((gammaImage[i] * gammaImage[i] * 258) >> 16);
+
             commandQueue.EnqueueArduinoCommand(OpcodeImage, gammaImage);
         }
 
         /// <summary>
-        /// Converts the matrix's pixel ARGB buffer to an 3-byte RGB tuple array and sends them to the arduino
+        ///     Converts the matrix's pixel ARGB buffer to an 3-byte RGB tuple array and sends them to the arduino
         /// </summary>
         public void EnqueuePixelSet()
         {
@@ -869,14 +738,36 @@ namespace Matrix_App
 
             for (var x = 0; x < pixels.Length; x++)
             {
-                image[x * 3 + 0] = (byte) (pixels[x] >> 16 & 0xFF);
-                image[x * 3 + 1] = (byte) (pixels[x] >> 8 & 0xFF);
-                image[x * 3 + 2] = (byte) (pixels[x] >> 0 & 0xFF);
+                image[x * 3 + 0] = (byte) ((pixels[x] >> 16) & 0xFF);
+                image[x * 3 + 1] = (byte) ((pixels[x] >> 8) & 0xFF);
+                image[x * 3 + 2] = (byte) ((pixels[x] >> 0) & 0xFF);
             }
 
             WriteImage(image);
         }
 
         #endregion
+
+        private void PushButtonOnClick(object? sender, EventArgs e)
+        {
+            var bytes = matrixWidth.Value * matrixHeight.Value * 3 * gifBuffer.Length + 5;
+            var data = new byte[(int) bytes];
+
+            data[0] = (byte) matrixWidth.Value;
+            data[1] = (byte) matrixHeight.Value;
+            data[2] = (byte) gifBuffer.Length;
+            data[3] = (byte) ((int) Delay.Value >> 8);
+            data[4] = (byte) ((int) Delay.Value & 0xFF);
+
+            for (var frame = 0; frame < gifBuffer.Length; frame++)
+            {
+                for (var pixel = 0; pixel < gifBuffer[0].Length; pixel++)
+                {
+                    data[frame * gifBuffer[0].Length + pixel + 5] = (byte) (gifBuffer[frame][pixel] * gifBuffer[frame][pixel] * 258 >> 16);
+                }
+            }
+            
+            commandQueue.EnqueueArduinoCommand(OpcodePush, data);
+        }
     }
 }

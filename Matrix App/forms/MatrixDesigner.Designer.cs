@@ -1,5 +1,6 @@
 ﻿using System.IO.Ports;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Matrix_App
 {
@@ -35,7 +36,7 @@ namespace Matrix_App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatrixDesignerMain));
-            this.Ports = new System.Windows.Forms.ComboBox();
+            this.Ports = new System.Windows.Forms.Button();
             this.Modus = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -82,6 +83,7 @@ namespace Matrix_App
             this.DragDropButton = new System.Windows.Forms.Button();
             matrixView = new Matrix_App.Matrix();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.PushButton = new Button();
             this.Modus.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,13 +109,20 @@ namespace Matrix_App
             // 
             // Ports
             // 
-            this.Ports.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Ports.Location = new System.Drawing.Point(62, 130);
             this.Ports.Name = "Ports";
             this.Ports.Size = new System.Drawing.Size(163, 23);
             this.Ports.TabIndex = 0;
-            this.Ports.SelectedIndexChanged += new System.EventHandler(this.Ports_SelectedIndexChanged);
-            // 
+            this.Ports.Click += PortsOnClick;
+            this.Ports.Text = "Settings";
+            //
+            // Push Button
+            //
+            this.PushButton.Location = new Point(3, 481 + 113 + 8);
+            this.PushButton.Size = new Size(216, 23 + 6);
+            this.PushButton.Text = "Push Animation";
+            this.PushButton.Click += PushButtonOnClick;         
+            //
             // Modus
             // 
             this.Modus.Controls.Add(this.tabPage1);
@@ -345,7 +354,7 @@ namespace Matrix_App
             this.matrixHeight.Size = new System.Drawing.Size(163, 23);
             this.matrixHeight.TabIndex = 1;
             this.matrixHeight.Value = new decimal(new int[] {
-                Defaults.MatrixStartHeight,
+                16,
             0,
             0,
             0});
@@ -377,6 +386,7 @@ namespace Matrix_App
             // Zeichnen
             // 
             this.Zeichnen.BackColor = System.Drawing.Color.Transparent;
+            this.Zeichnen.Controls.Add(this.PushButton);
             this.Zeichnen.Controls.Add(this.groupBox2);
             this.Zeichnen.Controls.Add(this.groupBox1);
             this.Zeichnen.Controls.Add(this.Clear);
@@ -550,6 +560,7 @@ namespace Matrix_App
             this.fill.TabIndex = 7;
             this.fill.Text = "Fill";
             this.fill.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
             this.fill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.fill.UseVisualStyleBackColor = true;
             this.fill.Click += new System.EventHandler(this.DrawFill_Click);
@@ -559,7 +570,7 @@ namespace Matrix_App
             this.ZeichnenFarbRad.BackColor = System.Drawing.SystemColors.Control;
             this.ZeichnenFarbRad.Location = new System.Drawing.Point(8, 12);
             this.ZeichnenFarbRad.Name = "ZeichnenFarbRad";
-            this.ZeichnenFarbRad.Size = new System.Drawing.Size(209, 214);
+            this.ZeichnenFarbRad.Size = new System.Drawing.Size(209, 209);
             this.ZeichnenFarbRad.TabIndex = 0;
             // 
             // pregeneratedMods
@@ -737,7 +748,7 @@ namespace Matrix_App
         #endregion
 
 
-        private System.Windows.Forms.ComboBox Ports;
+        private System.Windows.Forms.Button Ports;
         private System.Windows.Forms.TabControl Modus;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage Zeichnen;
@@ -784,6 +795,7 @@ namespace Matrix_App
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button PushButton;
     }
 }
 

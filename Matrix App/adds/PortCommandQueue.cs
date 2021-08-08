@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.IO.Ports;
 using System.Security.Permissions;
-using System.Text;
 using System.Threading;
-
 using static Matrix_App.Defaults;
 
-namespace Matrix_App
+namespace Matrix_App.adds
 {
     public class PortCommandQueue
     {
         private const string ThreadDeliverName = "Arduino Port Deliver Thread";
 
-        private Queue<byte[]> byteWriteQueue = new Queue<byte[]>();
+        private readonly Queue<byte[]> byteWriteQueue = new();
+        private readonly Queue<byte> statusByteQueue = new();
 
-        private Thread portDeliverThread;
+        private readonly Thread portDeliverThread;
 
-        private SerialPort port;
+        private readonly SerialPort tx;
 
         private bool running;
 
@@ -28,12 +25,15 @@ namespace Matrix_App
 
         private volatile bool isPortValid;
 
-        private readonly byte[] recived = new byte[ArduinoReceiveBufferSize];
+        private readonly byte[] received = new byte[ArduinoReceiveBufferSize];
         private int mark;
-        
-        public PortCommandQueue(ref SerialPort port)
+
+        private volatile bool synchronized;
+        private bool updateRealtime;
+
+        public PortCommandQueue(ref SerialPort tx)
         {
-            this.port = port;
+            this.tx = tx;
 
             portDeliverThread = new Thread(ManageQueue) { Name = ThreadDeliverName };
         }
@@ -44,38 +44,66 @@ namespace Matrix_App
             {
                 while (!kill)
                 {
-                    if (byteWriteQueue.Count <= 0) continue;
-                    
+                    if (!isPortValid) continue;
+                    if (byteWriteQueue.Count <= 0)
+                    {
+                        lock (byteWriteQueue)
+                        {
+                            Monitor.Wait(byteWriteQueue);
+                        }
+                        continue;
+                    }
+
                     byte[] bytes;
+                    int statusByte;
                     lock (byteWriteQueue)
                     {
                         bytes = byteWriteQueue.Dequeue();
+                        statusByte = statusByteQueue.Dequeue();
                     }
 
-                    lock (port)
+                    lock (tx)
                     {
-                        if (!isPortValid) continue;
+                        var success = false;
+                        var tryCounter = 0;
                         
-                        port.Open();
-                        port.Write(bytes, 0, bytes.Length);
-                        
-                        int b;
-                        mark = 0;
-                        while((b = port.ReadByte()) != ArduinoSuccessByte)
+                        do
                         {
-                            recived[mark++] = (byte) b;
-                        }
+                            try
+                            {
+                                tx.Write(bytes, 0, bytes.Length);
 
-                        port.Close();
+                                var b = ArduinoErrorByte;
+                                var errorFlag = false;
+                                mark = 0;
+                                while (!errorFlag && (b = tx.ReadByte()) != statusByte)
+                                {
+                                    received[mark++] = (byte) b;
+
+                                    errorFlag = b == ArduinoErrorByte;
+                                }
+                                synchronized = b == ArduinoSynchronizationByte;
+                                success = !errorFlag;
+                                Debug.WriteLine("===================> Com Success !");
+                            }
+                            catch (Exception e)
+                            {
+                                Debug.WriteLine("=============================> ERROR <=================================");
+                                Debug.WriteLine(e.Message);
+                            }
+
+                            tryCounter++;
+                        } while (!success && tryCounter < 3);
                     }
                 }
-            } catch (ThreadInterruptedException)
+            }
+            catch (ThreadInterruptedException)
             {
                 Thread.CurrentThread.Interrupt();
-            } 
+            }
         }
 
-        [SecurityPermissionAttribute(SecurityAction.Demand, ControlThread = true)]
+        [SecurityPermission(SecurityAction.Demand, ControlThread = true)]
         public void Close()
         {
             try
@@ -93,24 +121,34 @@ namespace Matrix_App
             {
                 // omit
             }
+            finally
+            {
+                if (tx.IsOpen)
+                {
+                    tx.Close();
+                }
+            }
         }
 
-        public void EnqueueArduinoCommand(params byte[] bytes)
+        private void EnqueueArduinoCommand(params byte[] bytes)
         {
+            if (!updateRealtime && bytes[0] != ArduinoInstruction.OpcodeScale &&
+                bytes[0] != ArduinoInstruction.OpcodePush)
+                return;
+            
             if (!running)
             {
                 running = true;
                 portDeliverThread.Start();
             }
-
+            
             lock (byteWriteQueue)
             {
-                if (byteWriteQueue.Count < ArduinoCommandQueueSize)
+                Monitor.Pulse(byteWriteQueue);
+                if (byteWriteQueue.Count >= ArduinoCommandQueueSize) return;
+                lock (byteWriteQueue)
                 {
-                    lock (byteWriteQueue)
-                    {
-                        byteWriteQueue.Enqueue(bytes);
-                    }
+                    byteWriteQueue.Enqueue(bytes);
                 }
             }
         }
@@ -121,6 +159,7 @@ namespace Matrix_App
             Buffer.BlockCopy(data, 0, wrapper, 1, data.Length);
             wrapper[0] = opcode;
 
+            statusByteQueue.Enqueue(ArduinoSuccessByte);
             EnqueueArduinoCommand(wrapper);
         }
 
@@ -132,11 +171,11 @@ namespace Matrix_App
             }
         }
 
-        internal void WaitForLastDequeue()
+        public static void WaitForLastDequeue()
         {
-            int timeCount = 0;
+            var timeCount = 0;
+            var wait = true;
             
-            bool wait = true;
             while(wait)
             {
                 timeCount++;
@@ -148,24 +187,66 @@ namespace Matrix_App
 
         public byte[] GetLastData()
         {
-            return recived;
+            return received;
         }
 
         public void ValidatePort()
         {
-            isPortValid = true;
+            try
+            {
+                if (!tx.IsOpen)
+                {
+                    tx.Open();
+                    isPortValid = true;
+                }
+            }
+            catch (Exception e)
+            {
+                isPortValid = false;
+                
+                Debug.WriteLine("Failed opening port: " + e.Message);
+            }
         }
 
         public void InvalidatePort()
         {
             isPortValid = false;
+            tx.Close();
         }
 
+        /// <summary>
+        /// Returns last location of written byte in the received buffer.
+        /// Call clears the mark. Any other call will return 0, unless the mark has been
+        /// altered by reading new data from the serial port.
+        /// </summary>
+        /// <returns></returns>
         public int GetMark()
         {
-            int tmp = mark;
+            var tmp = mark;
             mark = 0;
             return tmp;
+        }
+
+        public void EnqueueArduinoCommandSynchronized(byte[] bytes)
+        {
+            statusByteQueue.Enqueue(ArduinoSynchronizationByte);
+            EnqueueArduinoCommand(bytes);
+
+            while (!synchronized)
+            {
+            }
+            Debug.WriteLine("======================> Synchronized!");
+            synchronized = false;
+        }
+
+        public void SetRealtimeUpdates(bool @checked)
+        {
+            updateRealtime = @checked;
+        }
+
+        public bool GetRealtimeUpdates()
+        {
+            return updateRealtime;
         }
     }
 }

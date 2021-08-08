@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {}
+    "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {}
   },
   "projects": {
-    "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {
+    "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+        "projectUniqueName": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
         "projectName": "Matrix App",
-        "projectPath": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+        "projectPath": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
         "packagesPath": "C:\\Users\\SvenV\\.nuget\\packages\\",
-        "outputPath": "F:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\obj\\",
+        "outputPath": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SvenV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Bluetooth": {
+              "target": "Package",
+              "version": "[1.0.0.2, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "System.IO.Ports": {
               "target": "Package",
               "version": "[6.0.0-preview.5.21301.5, )"

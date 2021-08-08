@@ -16,8 +16,6 @@ namespace Matrix_App
         private volatile bool working;
 
         private readonly int capacity;
-        
-        private static readonly AutoResetEvent ResetEvent = new AutoResetEvent(false);
 
         public ThreadQueue(string name, int capacity)
         {
@@ -66,14 +64,9 @@ namespace Matrix_App
                 }
                 else
                 {
-                    try
+                    lock (taskQueue)
                     {
-                        ResetEvent.WaitOne(100);
-                    }
-                    catch (ThreadInterruptedException)
-                    {
-                        Thread.CurrentThread.Interrupt();
-                        return;
+                        Monitor.Wait(taskQueue);
                     }
                 }
             }
@@ -85,10 +78,11 @@ namespace Matrix_App
             {
                 if (taskQueue.Count >= capacity) 
                     return;
+             
+                Monitor.Pulse(taskQueue);
                 
                 working = true;
                 taskQueue.Enqueue(task);
-                ResetEvent.Set();
             }
         }
 
@@ -99,8 +93,12 @@ namespace Matrix_App
 
         public void Stop()
         {
+            lock (taskQueue)
+            {
+                Monitor.Pulse(taskQueue);
+            }
+            
             running = false;
-            ResetEvent.Set();
 
             thread.Interrupt();
             thread.Join(100);

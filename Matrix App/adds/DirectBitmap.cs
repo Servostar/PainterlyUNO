@@ -31,7 +31,7 @@ namespace Matrix_App
             int index = x + (y * Width);
             int col = colour.ToArgb();
 
-            Bits[index] = col;
+            Bits[index] = col & 0x00FFFFFF;
         }
 
         public void SetImage(Bitmap image)
