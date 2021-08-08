@@ -227,24 +227,9 @@ namespace Matrix_App.forms
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-        
         private void WritePortCombobox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             ValidatePortSelection(WritePortCombobox, port);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

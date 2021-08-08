@@ -85,7 +85,6 @@ namespace Matrix_App.forms
             this.label3.Size = new System.Drawing.Size(88, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Serial Port";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox1
             // 
@@ -115,7 +114,6 @@ namespace Matrix_App.forms
             this.label5.Size = new System.Drawing.Size(129, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "USB";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -133,7 +131,6 @@ namespace Matrix_App.forms
             this.label2.Size = new System.Drawing.Size(127, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Features";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 

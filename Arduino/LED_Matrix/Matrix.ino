@@ -153,18 +153,30 @@ void config() {
 	}
 }
 
+void upload() {
+	return;
+}
+
+void info() {
+	Serial.write((uint8_t) 91);
+	Serial.write((uint8_t) 0b01000000);
+	Serial.write("ATmega328P Arduino");
+}
+
 FNPTR_t opcodeTable[] = {
 		scale,   // opcode 0x00
 		single,  // opcode 0x01
 		image,   // opcode 0x02
 		fill,    // opcode 0x03
-		config	 // opcode 0x04
+		config,	 // opcode 0x04
+		upload,
+		info
 	};
 
 void setup() {
 	ledCount = STD_LED_MAX_COUNT;
 
-	Serial.begin(48000);
+	Serial.begin(9600);
 
 	FastLED.addLeds<LED_TYPE, DATA_PIN, GRB>(leds, ledCount);
 	FastLED.setCorrection(TypicalLEDStrip);
@@ -190,7 +202,7 @@ void loop() {
     Serial.println(opcode);
 #endif
 
-		if (opcode <= 4) {
+		if (opcode <= 6) {
 			opcodeTable[opcode]();
 			Serial.write(75);
 		}
