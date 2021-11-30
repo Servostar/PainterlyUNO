@@ -1234,26 +1234,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SvenV\\.nuget\\packages\\": {}
+    "C:\\Users\\Besitzer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+      "projectUniqueName": "D:\\Content\\Workspace\\Matrix App Projekt\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
       "projectName": "Matrix App",
-      "projectPath": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
-      "packagesPath": "C:\\Users\\SvenV\\.nuget\\packages\\",
-      "outputPath": "E:\\Content\\Schule\\BBS-T1-Ludwigshafen\\Klasse 12\\Info Lk\\bulli\\Neopixel\\App\\Matrix_App_V3.5.3\\Matrix App\\obj\\",
+      "projectPath": "D:\\Content\\Workspace\\Matrix App Projekt\\Matrix_App_V3.5.3\\Matrix App\\Matrix App.csproj",
+      "packagesPath": "C:\\Users\\Besitzer\\.nuget\\packages\\",
+      "outputPath": "D:\\Content\\Workspace\\Matrix App Projekt\\Matrix_App_V3.5.3\\Matrix App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SvenV\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Besitzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1301,8 +1299,20 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.15, 3.1.15]"
+            "version": "[3.1.21, 3.1.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
           }
         ],
         "frameworkReferences": {
@@ -1313,7 +1323,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Besitzer\\.dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

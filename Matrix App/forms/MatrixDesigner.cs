@@ -313,8 +313,8 @@ namespace Matrix_App
 
             commandQueue.EnqueueArduinoCommand(
                 OpcodeFill, // Opcode
-                (byte) ZeichnenTrackBarGreen.Value, // Red
-                (byte) ZeichnenTrackBarRed.Value, // Green
+                (byte) ZeichnenTrackBarRed.Value, // Red
+                (byte) ZeichnenTrackBarGreen.Value, // Green
                 (byte) ZeichnenTrackBarBlue.Value // Blue
             );
         }

@@ -81,3 +81,48 @@ E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matri
 E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.forms.Settings.resources
 E:\Content\Schule\BBS-T1-Ludwigshafen\Klasse 12\Info Lk\bulli\Neopixel\App\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Bluetooth.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.exe
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.deps.json
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.json
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.runtimeconfig.dev.json
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Matrix App.pdb
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Bluetooth.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Management.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netstandard2.0\System.IO.Ports.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netstandard2.0\System.IO.Ports.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.AssemblyReference.cache
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.ColorWheel.resources
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Matrix.resources
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.MatrixDesignerMain.resources
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.forms.Settings.resources
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix_App.Properties.Resources.resources
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.GenerateResource.cache
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfoInputs.cache
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.AssemblyInfo.cs
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CoreCompileInputs.cache
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.csproj.CopyComplete
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.dll
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.pdb
+D:\Content\Workspace\Matrix App Projekt\Matrix_App_V3.5.3\Matrix App\obj\Debug\netcoreapp3.1\Matrix App.genruntimeconfig.cache
