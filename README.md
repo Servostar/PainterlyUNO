@@ -1,6 +1,9 @@
 # PainterlyUNO
 A small C# application for creating and editing images, which then can be uploaded to an microcontroller which manages an matrix of LEDs.
 
+# Quick note
+This repo is under no active watch or development.
+
 > This project is currently in alpha status
 > This project was originally developed by german tongues, so forgive us, if you stumble upon something you miss to understand
 
